@@ -13,12 +13,13 @@ def main():
         print()
     if num<0:
         print()
-    for i in range[1, num]:
+    while i<=num:
         if i%3 == 0:
             print("Fizz")
         elif i%5 == 0:
             print("Buzz")
         else:
             print(i)
+        i = i+1
 if __name__ == '__main__':
     main()
