@@ -14,7 +14,7 @@ def main():
     if int_input <0:
         int_input = -1*(int_input)
     else:
-        for  i in int_input:
+        for  i in best_1:
     	    pro_duct = i *pro_duct
     print(pro_duct)
 if __name__ == "__main__":
