@@ -10,8 +10,8 @@ def main():
     str_input = input()
     s = ""
     i = 0
-    for i in len(str_input):
-    	if str_input[i] in(!, @, #, $, %, ^, &, *):
+    for i in str_input:
+    	if i in(!, @, #, $, %, ^, &, *):
     	    s = s+" "
     	else:
     	    s = s+str_input[i]
