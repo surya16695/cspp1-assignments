@@ -10,10 +10,10 @@ def main():
     str_input = input()
     s_1 = ""
     for i in str_input:
-    	if i in ('!', '@', '#', '$', '%', '^', '&', '*'):
-    	    s_1 = s_1+" "
-    	else:
-    	    s_1 = s_1+i
+        if i in ('!', '@', '#', '$', '%', '^', '&', '*'):
+            s_1 = s_1+" "
+        else:
+            s_1 = s_1+i
     print(s_1)
 if __name__ == "__main__":
     main()
