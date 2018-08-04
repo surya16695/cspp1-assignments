@@ -11,6 +11,7 @@ def main():
     int_input = int(input())
     best_1 = str(int_input)
     pro_duct = 1
+    i = 0
     if int_input <0:
         int_input = -1*(int_input)
     else:
