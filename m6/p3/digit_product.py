@@ -12,7 +12,7 @@ def main():
     if int_input <0:
         int_input = abs(int_input)
     pro_duct = 1
-    for i < 0:
+    for int_input > 0 :
     	pro_duct = (int_input%10)*pro_duct
     	int_input = int_input//10
     print(pro_duct)
