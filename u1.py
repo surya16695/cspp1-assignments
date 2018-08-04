@@ -1,0 +1,8 @@
+"""Apples"""
+numberOfLoops = 0
+numberOfApples = 2
+while numberOfLoops < 10:
+    numberOfApples = numberOfApples * 2
+   numberOfApples = numberOfApples+numberOfLoops
+    numberOfLoops = numberOfLoops - 1
+print("Number of apples: " + str(numberOfApples))
