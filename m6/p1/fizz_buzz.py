@@ -10,6 +10,8 @@ def main():
     '''
     num = int(input())
     for i in range(1, num):
+        if i == 0:
+            print(i)
         if i%3 == 0:
             print("Fizz")
         elif i%5 == 0:
