@@ -17,9 +17,9 @@ def main():
     while i <= num:
         if i%3 == 0:
             print("Fizz")
-        else i%5 == 0:
+        elif i%5 == 0:
             print("Buzz")
-        elif i%3 == 0 and i%5 == 0:
+        elif i%15 == 0:
             print("Fizz")
             print("Buzz")
         else:
