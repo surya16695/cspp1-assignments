@@ -10,8 +10,7 @@ def main():
     str_input = input()
     s = ""
     for i in len(str_input):
-    	if str_input[i] == "!" or str_input[i]  == "@" or str_input[i] == "#" \
-    		or str_input[i] == "$" or str_input[i] == "%" or str_input[i] == "^" or str_input[i] == "&" or str_input[i] == "*":
+    	if str_input[i] >= "!" and str_input[i]  <= "*":
     	    s = " "
     	else:
     	    s = str_input[i]
