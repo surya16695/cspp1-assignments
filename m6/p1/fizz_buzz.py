@@ -8,7 +8,15 @@ def main():
     '''
     Read number from the input, store it in variable num.
     '''
-    num = int(input())
-
-if __name__ == "__main__":
-    main()
+NUM = int(input())
+I = 1
+while I <= NUM:
+    if I%3 == 0:
+        print("Fizz")
+    elif I%5 == 0:
+        print("Buzz")
+    else:
+        print(I)
+    I = I+1
+print("required output is acquired")
+   
