@@ -15,6 +15,7 @@ def main():
             print("Fizz")
         elif i%5 == 0:
             print("Buzz")
-        else print(i):
+        elif: 
+            print(i)
 if __name__ == '__main__':
     main()
