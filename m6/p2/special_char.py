@@ -11,9 +11,9 @@ def main():
     s = ""
     for i in len(str_input):
     	if str_input[i] >= "!" and str_input[i]  <= "*":
-    	    s = " "
+    	    s = s+" "
     	else:
-    	    s = str_input[i]
+    	    s = s+str_input[i]
     print(str_input)
 if __name__ == "__main__":
     main()
