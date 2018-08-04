@@ -12,13 +12,16 @@ def main():
     i = 1
     if num == 0:
         print()
-    if num<0:
+    if num <0:
         print()
     while i <= num:
         if i%3 == 0:
             print("Fizz")
         elif i%5 == 0:
             print("Buzz")
+        elif i%3 == 0 and i%5 == 0:
+            print ("Fizz")
+            print ("Buzz")
         else:
             print(i)
         i = i+1
