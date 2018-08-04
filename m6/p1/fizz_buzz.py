@@ -9,6 +9,7 @@ def main():
     Read number from the input, store it in variable num.
     '''
     num = int(input())
+    i = 1
     if num == 0:
         print()
     if num<0:
@@ -20,6 +21,6 @@ def main():
             print("Buzz")
         else:
             print(i)
-    i = i+1
+        i = i+1
 if __name__ == '__main__':
     main()
