@@ -9,9 +9,8 @@ def main():
     '''
     str_input = input()
     s = ""
-    i = 0
     for i in str_input:
-    	if i in(!, @, #, $, %, ^, &, *):
+    	if i in (!, @, #, $, %, ^, &, *):
     	    s = s+" "
     	else:
     	    s = s+str_input[i]
