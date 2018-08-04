@@ -11,12 +11,11 @@ def main():
     int_input = int(input())
     best_1 = str(int_input)
     pro_duct = 1
-    int_input = abs*(int_input)
+    if int_input < 0:
+        int_input = -1 * (int_input)
     for i in best_1:
             pro_duct = (int_input%10)*pro_duct
             int_input = int_input//10
-    if int_input < 0:
-        pro_duct = -1*pro_duct
     print(pro_duct)
 if __name__ == "__main__":
     main()
