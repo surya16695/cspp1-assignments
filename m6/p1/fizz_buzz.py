@@ -14,7 +14,7 @@ def main():
         print()
     if num<0:
         print()
-    while i<=num:
+    while i <= num:
         if i%3 == 0:
             print("Fizz")
         elif i%5 == 0:
