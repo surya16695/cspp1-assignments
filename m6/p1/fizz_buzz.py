@@ -9,9 +9,11 @@ def main():
     Read number from the input, store it in variable num.
     '''
     num = int(input())
+    if num == 0:
+        print ("")
+    if num <0:
+        print("")
     for i in range(1, num):
-        if i == 0:
-            print(i)
         if i%3 == 0:
             print("Fizz")
         elif i%5 == 0:
