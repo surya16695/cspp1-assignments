@@ -18,5 +18,3 @@ def main():
         else:
             print(i)
         i = i+1
-
-   
