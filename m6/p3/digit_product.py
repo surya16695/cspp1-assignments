@@ -14,8 +14,8 @@ def main():
         int_input = -1*(int_input)
     else:
         for  i in int_input:
-    	pro_duct = (int_input%10)*pro_duct
-    	int_input = int_input//10
+    	    pro_duct = (int_input%10)*pro_duct
+    	    int_input = int_input//10
     print(pro_duct)
 if __name__ == "__main__":
     main()
