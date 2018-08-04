@@ -15,14 +15,14 @@ def main():
     if num<0:
         print()
     while i <= num:
-        if i%15 == 0 and i%3 == 0 and i%5 ==0:
-            print("Fizz")
-            print("Buzz")
-        elif i%3 == 0:
+        if i%3 == 0:
             print("Fizz")
         elif i%5 == 0:
             print("Buzz")
-                else:
+        elif i%15 == 0 and i%3 == 0 and i%5 == 0:
+            print("Fizz")
+            print("Buzz")
+        else:
             print(i)
         i = i+1
 if __name__ == '__main__':
