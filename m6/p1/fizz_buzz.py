@@ -10,9 +10,9 @@ def main():
     '''
     num = int(input())
     if num == 0:
-        print ("")
-    if num <0:
-        print("")
+        print()
+    if num<0:
+        print()
     for i in range(1, num):
         if i%3 == 0:
             print("Fizz")
