@@ -16,7 +16,8 @@ def main():
         int_input = -1*(int_input)
     else:
         for  i in best_1:
-    	    pro_duct = i *pro_duct
+    	    pro_duct = (int_input%10)*pro_duct
+    	    int_input = int_input//10
     print(pro_duct)
 if __name__ == "__main__":
     main()
