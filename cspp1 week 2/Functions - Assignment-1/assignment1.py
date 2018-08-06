@@ -41,7 +41,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Remaining balance:", str(payingDebtOffInAYear(data[0],data[1],data[2]))
+    print("Remaining balance:",(payingDebtOffInAYear(data[0],data[1],data[2]))
  #Monthly interest rate= (Annual interest rate) / 12.0
 # Minimum monthly payment = (Minimum monthly payment rate) x (Previous balance)
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
