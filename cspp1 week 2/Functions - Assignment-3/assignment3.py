@@ -59,8 +59,8 @@ def payingDebtOffInAYear(balance, annualInterestRate):
         low = minPay
     else:
         high = minPay
-    minPay = (high + low)/2.0
-    minPay = round(minPay,2)
+        minPay = (high + low)/2.0
+        minPay = round(minPay,2)
     return minPay
 
 
