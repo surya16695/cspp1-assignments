@@ -29,10 +29,10 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
     i = 1
     count = 0
     while i<=12:
-        monthlyinterestRate = annualInterestRate / 12.0
-        mini_monthly_payment = monthlyPaymentRate * balance
+        monthly_interest_Rate = annual_Interest_Rate / 12.0
+        mini_monthly_payment = monthly_Payment_Rate * balance
         monthly_unpaid_balance = balance - mini_monthly_payment
-        updated_balance_each_month = monthly_unpaid_balance + (monthlyinterestRate * monthly_unpaid_balance)
+        updated_balance_each_month = monthly_unpaid_balance + (monthly_interest_Rate * monthly_unpaid_balance)
         balance = updated_balance_each_month
         i += 1
         updated_balance_each_month1 = round(updated_balance_each_month,2) 
@@ -42,11 +42,5 @@ def main():
     data = data.split(' ')
     data = list(map(float, data))
     print("Remaining balance:",str(payingDebtOffInAYear(data[0],data[1],data[2])))
- #Monthly interest rate= (Annual interest rate) / 12.0
-# Minimum monthly payment = (Minimum monthly payment rate) x (Previous balance)
-# Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
-# Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
-
 if __name__== "__main__":
     main()
-
