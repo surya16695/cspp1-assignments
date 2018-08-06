@@ -56,18 +56,18 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate):
     guess = (monthly_payment_lower_bound + monthly_payment_upper_bound)/2
     while True:
         month = 1
-    while month <= 12:
+        while month <= 12:
             new_balance = new_balance - guess
             new_balance = new_balance + (monthly_interest_rate * new_balance)
             month += 1
         if new_balance > 0 and new_balance > epsilon:
-        monthly_payment_lower_bound = guess
+            monthly_payment_lower_bound = guess
             new_balance = balance
         elif new_balance < 0 and new_balance < -epsilon:
             monthly_payment_upper_bound = guess
-        new_balance = balance
-    else:
-         return guess
+            new_balance = balance
+        else:
+            return guess
 
         guess = (monthly_payment_lower_bound + monthly_payment_upper_bound)/2
 def main():
@@ -78,3 +78,4 @@ def main():
     print("Lowest Payment: " + str(round(paying_debt_off_in_a_year(data[0], data[1]), 2)))
 if __name__ == "__main__":
     main()
+    
