@@ -38,7 +38,7 @@
 
 
 def payingDebtOffInAYear(balance, annualInterestRate):
-   monthly_interest_rate = (annual_interest_rate) / 12.0
+    monthly_interest_rate = (annual_interest_rate) / 12.0
     monthly_p_l_b = balance / 12
     monthly_p_u_b = (balance * (1 + monthly_interest_rate)**12) / 12.0
     new_balance = balance
