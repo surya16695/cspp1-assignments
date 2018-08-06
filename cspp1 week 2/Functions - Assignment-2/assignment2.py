@@ -23,7 +23,7 @@ Monthly interest rate = (Annual interest rate) / 12.0
 Monthly unpaid balance = (Previous balance) - (Minimum fixed monthly payment)
 Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
 """
-def payingdebtOffInAYear(bal_ance, annual_interestrate):
+def paying_debtoffinayear(bal_ance, annual_interestrate):
     """def of bal"""
     i = 1
     ba_l = bal_ance
@@ -45,6 +45,6 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment:",str(payingDebtOffInAYear(data[0], data[1])))
+    print("Lowest Payment:",str(paying_debtoffinayear(data[0], data[1])))
 if __name__== "__main__":
     main()
