@@ -38,7 +38,7 @@
 
 
 def payingDebtOffInAYear(balance, annualInterestRate):
-	inBalance = balance
+    inBalance = balance
     monthlyInterestRate = annualInterestRate/12.0
     low = balance/12.0
     high = (balance * ((1.0 + monthlyInterestRate)**12))/12.0
