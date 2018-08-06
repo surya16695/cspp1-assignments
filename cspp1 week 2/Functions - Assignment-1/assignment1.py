@@ -34,7 +34,6 @@ def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
         monthly_unpaid_balance = balance - mini_monthly_payment
         updated_balance_each_month = monthly_unpaid_balance + (monthlyinterestRate * monthly_unpaid_balance)
         balance = updated_balance_each_month
-        print(balance)
         i += 1
         updated_balance_each_month1 = round(updated_balance_each_month,2) 
     return (updated_balance_each_month1)
