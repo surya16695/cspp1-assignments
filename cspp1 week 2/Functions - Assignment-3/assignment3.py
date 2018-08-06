@@ -44,7 +44,7 @@ def payingDebtOffInAYear(balance, annualInterestRate):
     high = (balance * ((1.0 + monthlyInterestRate)**12))/12.0
     epsilon = 0.05
     minPay = (high + low)/2.0
-    month = 0
+    month = 1
     calculate(month, balance, minPay, monthlyInterestRate):
         while month < 12:
             unpaidBalance = balance - minPay
