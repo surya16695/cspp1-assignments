@@ -1,5 +1,6 @@
 # Exercise: Assignment-1
-# Write a Python function, factorial(n), that takes in one number and returns the factorial of given number.
+# Write a Python function, factorial(n), that takes
+#in one number and returns the factorial of given number.
 
 # This function takes in one number and returns one number.
 
@@ -18,9 +19,9 @@ def fact_orial(n):
     pass
     
 
-
+""" def calling the function"""
 def main():
-    a = input()
+    a_1 = input()
     print(fact_orial(int(a)))    
 
 if __name__ == "__main__":
