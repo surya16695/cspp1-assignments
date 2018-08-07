@@ -12,13 +12,12 @@ def fact_orial(n):
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
+    """doc string"""
     if n <= 1:
-    	return 1
+        return 1
     else:
-    	return n*fact_orial(n-1)
+        return n*fact_orial(n-1)
     pass
-    
-
 """ def calling the function"""
 def main():
     a_1 = input()
