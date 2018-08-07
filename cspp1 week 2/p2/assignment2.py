@@ -12,9 +12,9 @@ def sumofdigits(n):
     '''
     # Your code here
     i = 0
-    a = str(a)
-    while i <= length(a):
-        sum = a[i] + sumofdigits(a[i+1])
+    b = a
+    while i <= length(b):
+        sum = b[i] + sumofdigits(b[i+1])
         i += 1
     return sum
 

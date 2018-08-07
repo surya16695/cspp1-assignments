@@ -12,9 +12,11 @@ def iterPower(base, exp):
     returns: int or float, base^exp
     '''
     # Your code here
-    while exp >= 0:
-        power = base**exp
-        return power
+    power = 1
+    while exp > 0:
+        power = base * power
+        exp -= 1
+    return power
     
 
 
