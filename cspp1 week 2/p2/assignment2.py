@@ -12,7 +12,7 @@ def sumofdigits(n):
     '''
     # Your code here
     i = 0
-    a = tostr(a)
+    a = str(a)
     while i <= length(a):
         sum = i+sumofdigits(a)
         i += 1
