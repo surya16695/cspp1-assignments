@@ -16,10 +16,9 @@ def fact_orial(n_1):
         return 1
     return n_1*fact_orial(n_1 - 1)
 
-""" def calling the function"""
 def main():
+    """ def calling the function"""
     a_1 = input()
-    print(fact_orial(int(a_1)))    
-
+    print(fact_orial(int(a_1)))
 if __name__ == "__main__":
     main()
