@@ -4,7 +4,7 @@
 
 # This function takes in one number and returns one number.
 
-
+"""doc string about the factorial function"""
 def fact_orial(n_1):
     '''
     n_1 is positive Integer
@@ -12,8 +12,7 @@ def fact_orial(n_1):
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
-    """doc string"""
-    if n_1 <= 1:
+        if n_1 <= 1:
         return 1
     return n_1*fact_orial(n_1 - 1)
 
