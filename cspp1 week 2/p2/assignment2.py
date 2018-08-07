@@ -14,15 +14,14 @@ def sumofdigits(n):
     i = 0
     a = str(a)
     while i <= length(a):
-        sum = i+sumofdigits(a)
+        sum = a[i] + sumofdigits(a[i+1])
         i += 1
     return sum
-
 
 def main():
     a = input()
     print(sumofdigits(int(a)))  
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
 
