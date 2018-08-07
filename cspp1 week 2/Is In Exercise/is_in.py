@@ -18,6 +18,7 @@ def isIn(char, aStr):
         return aStr == char
     if char < aStr[len_str//2]:
         return isIn(char, aStr[:len_str//2])
+        print (isIn(char, aStr[:len_str//2]))
     elif char > aStr[len_str//2]:
         return isIn(char, aStr[len_str//2+1:])
     return True
