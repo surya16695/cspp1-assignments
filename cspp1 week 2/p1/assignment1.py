@@ -12,7 +12,7 @@ def fact_orial(n_1):
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
-        if n_1 <= 1:
+    if n_1 <= 1:
         return 1
     return n_1*fact_orial(n_1 - 1)
 
