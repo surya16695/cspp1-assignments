@@ -22,7 +22,7 @@ def fact_orial(n):
 """ def calling the function"""
 def main():
     a_1 = input()
-    print(fact_orial(int(a)))    
+    print(fact_orial(int(a_1)))    
 
 if __name__ == "__main__":
     main()
