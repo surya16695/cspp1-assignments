@@ -15,9 +15,10 @@ def get_guessed_word(secret_word, letters_guessed):
     # FILL IN YOUR CODE HERE...
     for _ in secret_word:
         for char in letters_guessed:
-            if secret_word != letters_guessed:
+            if secret_word == leters_guessed:
                 secret_word = secret_word.replace(char, "_")
         return secret_word
+
 
 def main():
     '''
