@@ -15,15 +15,12 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
-    count = 0
-    for i in range(0, len(secret_word)):
-        for j in range(0, len(letters_guessed)):
-            if secret_word[i] == letters_guessed[j]:
-                count += 1
-    if count == len(secret_word):
-        return True
-    else:
-        return False
+    for char in secret_word:
+        for char in letters_guessed:
+            secret_word = secret_word.replace(char, "")
+            if secret_word == "":
+                return True
+            return False    
 
 def main():
     '''
