@@ -44,4 +44,3 @@ def main():
     print("Remaining balance:", str(paying_debtoffinayear(data[0], data[1], data[2])))
 if __name__ == "__main__":
     main()
-    

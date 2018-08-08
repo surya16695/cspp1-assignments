@@ -1,24 +1,45 @@
-# Exercise:""" Assignment-1"""
-# Write a Python function, factorial(n), that takes
-#in one number and returns the factorial of given number.
+'''
+Exercise: Assignment-1
+First, implement the function isWordGuessed that takes in two parameters -
+a string, secret_word, and a list of letters, letters_guessed. This function
+returns a boolean - True if secret_word has been guessed (ie, all the letters of
+secret_word are in letters_guessed) and False otherwise.
+'''
 
-# This function takes in one number and returns one number.
 
-"""doc string about the factorial function"""
-def fact_orial(n_1):
+def is_word_guessed(secret_word, letters_guessed):
     '''
-    n_1 is positive Integer
-
-    returns: a positive integer, the factorial of n.
+    secret_word: string, the word the user is guessing
+    letters_guessed: list, what letters have been guessed so far
+    returns: boolean, True if all the letters of secret_word are in letters_guessed;
+      False otherwise
     '''
-    # Your code here
-    if n_1 <= 1:
-        return 1
-    return n_1*fact_orial(n_1 - 1)
+    # FILL IN YOUR CODE HERE...
+    count = 0
+    for i in range(0, len(secret_word)):
+        for j in range(0, len(letters_guessed)):
+            if secret_word[i] == letters_guessed[j]:
+                count += 1
+    if count == len(secret_word):
+        return True
+    else:
+        return False
 
 def main():
-    """ def calling the function"""
-    a_1 = input()
-    print(fact_orial(int(a_1)))
+    '''
+    Main function for the program
+    '''
+    user_input = input()
+    if user_input:
+        data = user_input.split()
+        secret_word = data[0]
+    else:
+        data = []
+        secret_word = ""
+    list1 = []
+    for j in range(1, len(data)):
+        list1.append(data[j][0])
+    print(is_word_guessed(secret_word, list1))
+
 if __name__ == "__main__":
     main()

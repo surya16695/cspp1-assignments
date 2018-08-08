@@ -14,6 +14,10 @@ def odd(x):
     returns: True if x is odd, False otherwise
     '''
     # Your code here
+    count = (,)
+    for i in len(x)
+    	i%2 == 0
+    	count = count + x[i]
     return(x%2 = 1)
 
 def main():
