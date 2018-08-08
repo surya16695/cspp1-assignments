@@ -20,7 +20,7 @@ def get_guessed_word(secret_word, letters_guessed):
         else:
             word_out += "_"
     return word_out
-    
+
 def main():
     '''
     Main function for current assignment
