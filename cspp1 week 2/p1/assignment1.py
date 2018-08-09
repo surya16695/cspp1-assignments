@@ -1,42 +1,43 @@
 '''
-Exercise: Assignment-1
-First, implement the function isWordGuessed that takes in two parameters -
-a string, secret_word, and a list of letters, letters_guessed. This function
-returns a boolean - True if secret_word has been guessed (ie, all the letters of
-secret_word are in letters_guessed) and False otherwise.
+Exercise : Assignment-1
+implement the function get_available_letters that takes in one parameter -
+a list of letters, letters_guessed. This function returns a string
+that is comprised of lowercase English letters - all lowercase English letters
+that are not in letters_guessed
 '''
 
+def get_available_letters(letters_guessed):
+    '''
+    :param letters_guessed: list, what letters have been guessed so far
+    returns: string, comprised of letters that represents what letters have not
+      yet been guessed.
+    '''
+    
 
-def is_word_guessed(secret_word, letters_guessed):
-    '''
-    secret_word: string, the word the user is guessing
-    letters_guessed: list, what letters have been guessed so far
-    returns: boolean, True if all the letters of secret_word are in letters_guessed;
-      False otherwise
-    '''
-    # FILL IN YOUR CODE HERE...
-    for _ in secret_word:
-        for char in letters_guessed:
-            secret_word = secret_word.replace(char, "")
-    if secret_word == "":
-        return True
-    return False
+
+def get_available_letters(letters_guessed):
+   #param letters_guessed: list, what letters have been guessed so far
+   #eturns: string, comprised of letters that represents what letters have not
+    # yet been guessed
+   import string
+   alphabets = string.ascii_lowercase
+   for char in letters_guessed:
+       if char in letters_guessed:
+           alphabets = alphabets.replace(char, "")
+   return alphabets
+
 
 def main():
-    '''
-    Main function for the program
-    '''
-    user_input = input()
-    if user_input:
-        data = user_input.split()
-        secret_word = data[0]
-    else:
-        data = []
-        secret_word = ""
-    list1 = []
-    for j in range(1, len(data)):
-        list1.append(data[j][0])
-    print(is_word_guessed(secret_word, list1))
+
+   '''
+   Main function for the given program
+   '''
+   user_input = input()
+   user_input = user_input.split()
+   data = []
+   for char in user_input:
+       data.append(char[0])
+   print(get_available_letters(data))
 
 if __name__ == "__main__":
-    main()
+   main()
