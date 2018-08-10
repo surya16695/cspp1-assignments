@@ -19,7 +19,7 @@ def get_word_score(word, n):
     returns: int >= 0
     """
     # TO DO ... <-- Remove this comment when you code this function
-        """
+    """
     Unit test for getWordScore
     """
     failure = False
