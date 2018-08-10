@@ -30,7 +30,7 @@ def get_word_score(word, n):
         if score != words[(word, n)]:
             print ("FAILURE: test_getWordScore()")
             print ("\tExpected", words[(word, n)], "points but got '" + str(score) + "' for word '" + word + "', n=" + str(n))
-            failure = True
+        failure = True
     if not failure:
         print ("SUCCESS: test_getWordScore()")
     
