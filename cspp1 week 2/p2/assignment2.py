@@ -141,3 +141,6 @@ def hangman(secretWord):
 global secretWord
 secretWord = choose_word(wordlist).lower()
 hangman(secretWord)
+
+if __name__ == "__main__":
+   main()
