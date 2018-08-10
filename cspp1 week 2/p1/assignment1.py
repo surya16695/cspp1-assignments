@@ -1,43 +1,49 @@
 '''
-Exercise : Assignment-1
-implement the function get_available_letters that takes in one parameter -
-a list of letters, letters_guessed. This function returns a string
-that is comprised of lowercase English letters - all lowercase English letters
-that are not in letters_guessed
+Exercise: Assignment-1
+The first step is to implement some code that allows us to calculate the score for a single word. The function get_word_score should accept as input a string of lowercase letters (a word) and return the integer score for that word, using the game's scoring rules.
 '''
 
-def get_available_letters(letters_guessed):
-    '''
-    :param letters_guessed: list, what letters have been guessed so far
-    returns: string, comprised of letters that represents what letters have not
-      yet been guessed.
-    '''
+def get_word_score(word, n):
+    """
+    Returns the score for a word. Assumes the word is a valid word.
+
+    The score for a word is the sum of the points for letters in the
+    word, multiplied by the length of the word, PLUS 50 points if all n
+    letters are used on the first turn.
+
+    Letters are scored as in Scrabble; A is worth 1, B is worth 3, C is
+    worth 3, D is worth 2, E is worth 1, and so on (see SCRABBLE_LETTER_VALUES)
+
+    word: string (lowercase letters)
+    n: integer (HAND_SIZE; i.e., hand size required for additional points)
+    returns: int >= 0
+    """
+    # TO DO ... <-- Remove this comment when you code this function
+        """
+    Unit test for getWordScore
+    """
+    failure = False
+    # dictionary of words and scores
+    words = {("", 7): 0, ("it", 7): 4, ("was", 7): 18, ("scored", 7): 54, ("waybill", 7): 155, ("outgnaw", 7): 127, ("fork", 7): 44, ("fork", 4): 94}
+    for (word, n) in words.keys():
+        score = getWordScore(word, n)
+        if score != words[(word, n)]:
+            print "FAILURE: test_getWordScore()"
+            print "\tExpected", words[(word, n)], "points but got '" + str(score) + "' for word '" + word + "', n=" + str(n)
+            failure = True
+    if not failure:
+        print "SUCCESS: test_getWordScore()"
     
 
 
-def get_available_letters(letters_guessed):
-   #param letters_guessed: list, what letters have been guessed so far
-   #eturns: string, comprised of letters that represents what letters have not
-    # yet been guessed
-   import string
-   alphabets = string.ascii_lowercase
-   for char in letters_guessed:
-       if char in letters_guessed:
-           alphabets = alphabets.replace(char, "")
-   return alphabets
-
-
 def main():
+    '''
+    Main function for the given problem
+    '''
+    data = input()
+    data = data.split()
+    print(get_word_score(data[0], int(data[1])))
 
-   '''
-   Main function for the given program
-   '''
-   user_input = input()
-   user_input = user_input.split()
-   data = []
-   for char in user_input:
-       data.append(char[0])
-   print(get_available_letters(data))
 
 if __name__ == "__main__":
-   main()
+    main()
