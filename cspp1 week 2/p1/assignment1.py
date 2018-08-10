@@ -26,7 +26,7 @@ def get_word_score(word, n):
     # dictionary of words and scores
     words = {("", 7): 0, ("it", 7): 4, ("was", 7): 18, ("scored", 7): 54, ("waybill", 7): 155, ("outgnaw", 7): 127, ("fork", 7): 44, ("fork", 4): 94}
     for (word, n) in words.keys():
-        score = getWordScore(word, n)
+        score = get_Word_Score(word, n)
         if score != words[(word, n)]:
             print ("FAILURE: test_getWordScore()")
             print ("\tExpected", words[(word, n)], "points but got '" + str(score) + "' for word '" + word + "', n=" + str(n))
@@ -42,8 +42,7 @@ def main():
     '''
     data = input()
     data = data.split()
-    print(get_word_score(data[0], int(data[1])))
-
+    print (get_word_score(data[0], int(data[1])))
 
 if __name__ == "__main__":
     main()
