@@ -54,8 +54,8 @@ def main():
     lines = int(input())
     for i in range(lines):
         i += 1
-        stringinput.split("")
-        string += '\n'
+        string.split(" ")
+        #string += '\n'
         list_1.extend(string)
     string = list_1
     print(create_social_network(string))
