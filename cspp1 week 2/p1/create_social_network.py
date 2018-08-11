@@ -54,7 +54,7 @@ def main():
     lines = int(input())
     for i in range(lines):
         i += 1
-        stringinput.split(" ")
+        stringinput.split("")
         string += '\n'
         list_1.extend(string)
     string = list_1
