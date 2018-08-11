@@ -18,31 +18,29 @@ def get_word_score(word, n):
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     returns: int >= 0
     """
-    # TO DO ... <-- Remove this comment when you code this function
-    """
-    Unit test for getWordScore
-    """
-    failure = False
-    # dictionary of words and scores
-    words = {("", 7): 0, ("it", 7): 4, ("was", 7): 18, ("scored", 7): 54, ("waybill", 7): 155, ("outgnaw", 7): 127, ("fork", 7): 44, ("fork", 4): 94}
-    for (word, n) in words.keys():
-        score = get_word_score(word, n)
-        if score != words[(word, n)]:
-            print ("FAILURE: test_getWordScore()")
-            print ("\tExpected", words[(word, n)], "points but got '" + str(score) + "' for word '" + word + "', n=" + str(n))
-        failure = True
-    if not failure:
-        print ("SUCCESS: test_getWordScore()")
-    
-
-
+    SCRABBLE_LETTER_VALUES = {
+    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
+    'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
+    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
+    }
+    sum_0 = 0
+    L=len(word)
+    for j in word:
+        if j in SCRABBLE_LETTER_VALUES:
+            sum_0 = sum_0 + SCRABBLE_LETTER_VALUES[j]
+    if n == L:
+        sum_0 = sum_0*L
+        return sum_0 + 50
+   
+    return sum_0 * L
 def main():
     '''
     Main function for the given problem
     '''
     data = input()
     data = data.split()
-    print (get_word_score(data[0], int(data[1])))
+    print(get_word_score(data[0], int(data[1])))
+
 
 if __name__ == "__main__":
     main()
