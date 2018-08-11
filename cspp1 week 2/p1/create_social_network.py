@@ -34,19 +34,15 @@ def create_social_network(data):
 
     # remove the pass below and start writing your code
     dict_1 = {}
-    dict_2 = {}
-    str_1 = ""
-    str_2 = ""
-    for word in  data:
-        str_1 = data.split()
-        for word in str_1:
-            str_2 = str_1.split("follows")
-            for word in str_2:
-               str_3 = str_2.split(",")
-            dict_1[str_2] = str_3
-
+    str_brk = "follows"
+    for i in range(0,len(data),3):
+        if data[i+1] not in range in str_brk
+            break
+        if data[i] not in dict_1
+            dict_1[data(i)] = str(data[i+2].split(','))
             
     return dict_1
+        }
 
 
  
