@@ -40,7 +40,7 @@ def create_social_network(data):
             break
         if data[i] not in dict_1:
             dict_1[data[i]] = str(data[i+2]).split(',')
-    return dict_1
+        return dict_1
         
 
 
