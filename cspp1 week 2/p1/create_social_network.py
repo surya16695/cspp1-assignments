@@ -41,9 +41,10 @@ def create_social_network(data):
         str_1 = data.split()
         for word in str_1:
             str_2 = str_1.split('follows')
-            i = 0
             for word in str_2:
-               dict_1(str_2[0]) = str_2[1].split(",")
+               str_3 = str_2.split(",")
+            dict_1[str_2] = str_3
+
             
     return dict_1
 
