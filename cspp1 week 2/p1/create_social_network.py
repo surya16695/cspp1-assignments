@@ -45,9 +45,9 @@ def create_social_network(data):
             print (str_2)
             i = 0
             for i in len(str_2):
-                dict_1(str_2[i]) = str_2[i+1].split(",")
-                dict_2 = dict_1
-            return dict_2
+               dict_1 (str_2[i]) = str_2[i+1]
+            
+            return dict_1
 
 
  
