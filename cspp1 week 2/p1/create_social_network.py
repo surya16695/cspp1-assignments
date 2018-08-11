@@ -42,7 +42,7 @@ def create_social_network(data):
             dict_1[data(i)] = str(data[i+2].split(','))
             
     return dict_1
-        }
+        
 
 
  
