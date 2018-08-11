@@ -42,7 +42,7 @@ def create_social_network(data):
             l_1 = l_1.split('follows')
             for word in l_1:
                 b_1 = l_1.split[',']
-             dict_1[d_1] = [l_1]
+            dict_1[d_1] = [l_1]
 
     return dict_1
 
