@@ -34,7 +34,6 @@ def create_social_network(data):
 
     # remove the pass below and start writing your code
     dict_1 = {}
-       dict_1(x.split('follows') for x in data.split(','))
     str_1 = ""
     str_2 = ""
     for word in range of data:
