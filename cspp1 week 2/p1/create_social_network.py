@@ -34,15 +34,8 @@ def create_social_network(data):
 
     # remove the pass below and start writing your code
     dict_1 = {}
-    l_1 = []
-    d_1 = []
-    for word in data:
-        d_1 = data.split('')
-        for word in d_1:
-            l_1 = l_1.split('follows')
-            for word in l_1:
-                b_1 = l_1.split[',']
-            dict_1[d_1] = [l_1]
+    dict_1(x.split('follows') for x in data.split(''))
+ 
 
     return dict_1
 
