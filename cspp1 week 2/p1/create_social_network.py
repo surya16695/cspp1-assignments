@@ -35,7 +35,7 @@ def create_social_network(data):
     # remove the pass below and start writing your code
     dict_1 = {}
     str_brk = "follows"
-    for i in range(0,len(data),3):
+    for i in range(0, len(data), 3):
         if data[i+1] not in str_brk:
             break
         if data[i] not in dict_1:
