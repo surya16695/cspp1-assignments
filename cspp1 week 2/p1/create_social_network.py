@@ -36,9 +36,6 @@ def create_social_network(data):
     dict_1 = {}
     dict_1(x.split('follows') for x in data.split(','))
  
-
-    return dict_1
-
 def main():
     '''
         handling testcase input and printing output
