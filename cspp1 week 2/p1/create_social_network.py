@@ -37,7 +37,7 @@ def create_social_network(data):
     str_brk = "follows"
     for i in range(0, len(data), 3):
         if data[i+1] not in str_brk:
-            #break
+            break
         if data[i] not in dict_1:
             dict_1[data[i]] = str(data[i+2]).split(',')
     return dict_1
@@ -54,7 +54,7 @@ def main():
     lines = int(input())
     for i in range(lines):
         i += 1
-        string.split(" ")
+        string = input.split(" ")
         #string += '\n'
         list_1.extend(string)
     string = list_1
