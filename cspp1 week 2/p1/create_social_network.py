@@ -34,6 +34,7 @@ def create_social_network(data):
 
     # remove the pass below and start writing your code
     dict_1 = {}
+    dict_2 = {}
     str_1 = ""
     str_2 = ""
     for word in  data:
@@ -43,7 +44,8 @@ def create_social_network(data):
             i = 0
             for i in len(str_2):
                 dict_1(str_2[i]) = str_2[i+1].split(",")
-    return dict_1
+                dict_2 = dict_1
+    return dict_2
 
 
  
