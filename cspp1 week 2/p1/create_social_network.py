@@ -50,12 +50,14 @@ def main():
         handling testcase input and printing output
     '''
     string = ''
+    list_1 = []
     lines = int(input())
     for i in range(lines):
         i += 1
-        string += input()
+        stringinput.split(" ")
         string += '\n'
-
+        list_1.extend(string)
+    string = list_1
     print(create_social_network(string))
 
 if __name__ == "__main__":
