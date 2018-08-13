@@ -14,7 +14,10 @@ def follow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    pass
+    if arg1 in network:
+        network[arg1].append(arg2)
+    return network
+              
 
 def unfollow(network, arg1, arg2):
     '''
@@ -26,7 +29,10 @@ def unfollow(network, arg1, arg2):
         update the network dictionary and return it
     '''
     # remove the pass below and start writing your code
-    pass
+    if arg1 in network:
+        network[arg1].remove(arg2)
+    return network
+              
 
 def delete_person(network, arg1):
     '''
@@ -38,8 +44,15 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
+    # remove the pass below and start writing your code:
+    '''returns a user's connections from the dictionary created in 
+    create_data_structure(string_input).'''
+    if arg1 in network:
+        del network[arg1]
+    for row in network:
+        if arg1 in network[row]:
+            network[row].remove(arg1)
+    return network
 
 def main():
     '''
