@@ -84,7 +84,7 @@ def hand_rank(hand):
         return 5
     elif is_flush(hand):
         return 3
-    elif :is_straight(hand)
+    elif is_straight(hand):
         return 2
     else:
         return 1
