@@ -48,10 +48,9 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     for i in range(len(hand)-1):
-        if str(hand[i][1]) == str(hand[i+1][1]):
-            return True
-        else:
+        if hand[i][1] != (hand[i+1][1]):
             return False
+    return True
 
     
 
