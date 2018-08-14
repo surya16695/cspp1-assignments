@@ -4,11 +4,21 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 no_of_hands = COUNT
-c_D = ['AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'KD', 'JD', 'QD']
-c_H = ['AH', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', 'TH', 'KH', 'JH', 'QH'] 
-c_S = ['AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'KS', 'JS', 'QS'] 
-c_C = ['AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'KC', 'JC', 'QC']
-
+dec_k = ['AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'KD', 'JD', 'QD'
+         'AH', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', 'TH', 'KH', 'JH', 'QH', 
+         'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'KS', 'JS', 'QS', 
+         'AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'KC', 'JC', 'QC']
+        for i in hand;
+            if dec_k[i][0] == 'A':
+                return 14
+            if dec_k[i][0] == 'K':
+                return 13
+            if dec_k[i][0] == 'Q':
+                return 12
+            if dec_k[i][0] == 'J':
+                return 11
+            if dec_k[i][0] == 'T':
+                return 10
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -19,7 +29,11 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-
+    for i  in range (len(hand)):
+        if int(hand[i][0])+1 == int(hand[i+1][0]):
+            return True
+        else:
+            return False
 
 
 def is_flush(hand):
@@ -31,7 +45,13 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
+    for i in range(len(hand)):
+        if str(hand[i][1]) == str(hand[i+1][1])
+            return True
+        else:
+            return False
 
+    
 
 def hand_rank(hand):
     '''
@@ -61,8 +81,11 @@ def hand_rank(hand):
         return 1
     elif is_flush(hand):
         return 2
-    else is_straight(hand) and is_flush(hand):
+    else: 
+        is_straight(hand) and is_flush(hand)
         return 3
+    else:
+        return 0
 
 
 def poker(hands):
@@ -75,7 +98,7 @@ def poker(hands):
 
         Output: Return the winning poker hand
     '''
-    print(hands)
+
     # the line below may be new to you
     # max function is provided by python library
     # learn how it works, in particular the key argument, from the link
