@@ -31,7 +31,7 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     hand_temp = sorted(hand, key=get_val)
-    print(hand_temp)
+    #print(hand_temp)
     for i  in range (len(hand)-1):
         if (get_val(hand_temp[i])+1) != (get_val(hand_temp[i+1])):
             return False
