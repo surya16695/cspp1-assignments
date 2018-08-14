@@ -88,10 +88,6 @@ def hand_rank(hand):
         return 1
     elif is_flush(hand):
         return 2
-    else:
-        return
-
-
 
 def poker(hands):
     '''
