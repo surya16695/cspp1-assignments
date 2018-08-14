@@ -8,18 +8,18 @@ dec_k = ['AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'KD', 'JD',
          'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'KS', 'JS', 'QS', 
          'AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'KC', 'JC', 'QC']
     # for i in range(len(hand)-1):
-    def get_val(x):
-        if x[0] == 'A':
-            return 14
-        elif x[0] == 'K':
-            return 13
-        elif x[0] == 'Q':
-            return 12
-        elif x[0] == 'J':
-            return 11
-        elif x[0] == 'T':
-            return 10
-        return int(x)
+def get_val(x):
+    if x[0] == 'A':
+        return 14
+    elif x[0] == 'K':
+        return 13
+    elif x[0] == 'Q':
+        return 12
+    elif x[0] == 'J':
+        return 11
+    elif x[0] == 'T':
+        return 10
+    return int(x)
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
