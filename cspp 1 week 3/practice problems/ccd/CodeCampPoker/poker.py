@@ -3,23 +3,24 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-dec_k = ['AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'KD', 'JD', 'QD'
-         'AH', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', 'TH', 'KH', 'JH', 'QH', 
-         'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'KS', 'JS', 'QS', 
-         'AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'KC', 'JC', 'QC']
-    # for i in range(len(hand)-1):
-def get_val(x):
-    if x[0] == 'A':
-        return 14
-    elif x[0] == 'K':
-        return 13
-    elif x[0] == 'Q':
-        return 12
-    elif x[0] == 'J':
-        return 11
-    elif x[0] == 'T':
+# D_CARDS = ['2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'JD', 'QD', 'KD', 'AD']
+# H_CARDS = ['2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', 'TH', 'JH', 'QH', 'KH', 'AH']
+# S_CARDS = ['2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'JS', 'QS', 'KS', 'AS']
+# C_CARDS = ['2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'JC', 'QC', 'KC', 'AC']
+def card_value(x_x):
+    '''integer casting function'''
+    if x_x[0] == 'T':
         return 10
-    return int(x[0])
+    if x_x[0] == 'J':
+        return 11
+    if x_x[0] == 'Q':
+        return 12
+    if x_x[0] == 'K':
+        return 13
+    if x_x[0] == 'A':
+        return 14
+    return int(x_x[0])
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -30,14 +31,17 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    hand_temp = sorted(hand, key=get_val)
-    for i  in range (len(hand)-1):
-        if (get_val(hand_temp[i])+1) != (get_val(hand_temp[i+1])):
-            print("False")
+    temp_hand = sorted(hand, key=card_value)
+    #print(temp_hand)
+    if temp_hand[-1] == 'A' and temp_hand[0]+temp_hand[1]+temp_hand[2]+temp_hand[3] == '2345':
+        temp_hand = ['1', '2', '3', '4', '5']
+    for i in range(len(temp_hand)-1):
+        # print(i)
+        #print(temp_hand[i+1],temp_hand[i],card_value(temp_hand[i+1]) - card_value(temp_hand[i]))
+        if (card_value(temp_hand[i+1]) - card_value(temp_hand[i])) != 1:
+            # print("fail")
             return False
-    print("True")
     return True
-
 
 def is_flush(hand):
     '''
@@ -49,14 +53,9 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     for i in range(len(hand)-1):
-        if str(hand[i][1]) == str(hand[i+1][1]):
-            print("True")
-            return True
-        else:
-            print("False")
+        if hand[i][1] != hand[i+1][1]:
             return False
-
-    
+    return True
 
 def hand_rank(hand):
     '''
@@ -69,7 +68,7 @@ def hand_rank(hand):
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
-    # Each card is coded as a 2 character string. Example King of Hearts is KH
+    # Each card is coded as a 2 character string. Example Kind of Hearts is KH
     # First character for face value 2,3,4,5,6,7,8,9,T,J,Q,K,A
     # Second character for the suit S (Spade), H (Heart), D (Diamond), C (Clubs)
     # What would be the logic to determine if a hand is a straight or flush?
@@ -81,16 +80,14 @@ def hand_rank(hand):
     # the second best would be a flush with the return value 2
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
-    # max in poker function uses these return values to select the best han
-
+    # max in poker function uses these return values to select the best hand
+    if is_straight(hand) and is_flush(hand):
+        return 5 #* card_value(max(hand, key=card_value))
+    if is_flush(hand):
+        return 3 #* card_value(max(hand, key=card_value))
     if is_straight(hand):
-        return 2
-    elif is_flush(hand):
-        return 3
-    elif is_straight(hand) and is_flush(hand):
-        return 5
-    else:
-        return 1
+        return 2 #* card_value(max(hand, key=card_value))
+    return 1 #* card_value(max(hand, key=card_value))
 
 def poker(hands):
     '''
@@ -122,4 +119,5 @@ if __name__ == "__main__":
         ha = line.split(" ")
         HANDS.append(ha)
     # test the poker function to see how it works
+    # print(HANDS)
     print(' '.join(poker(HANDS)))
