@@ -33,7 +33,9 @@ def is_straight(hand):
     hand_temp = sorted(hand, key=get_val)
     for i  in range (len(hand)-1):
         if (get_val(hand_temp[i])+1) != (get_val(hand_temp[i+1])):
+            print("False")
             return False
+    print("True")
     return True
 
 
@@ -48,8 +50,10 @@ def is_flush(hand):
     '''
     for i in range(len(hand)-1):
         if str(hand[i][1]) == str(hand[i+1][1]):
+            print("True")
             return True
         else:
+            print("False")
             return False
 
     
