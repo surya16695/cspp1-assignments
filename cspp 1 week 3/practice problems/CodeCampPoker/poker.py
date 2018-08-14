@@ -87,7 +87,8 @@ def hand_rank(hand):
         return 1
     elif is_flush(hand):
         return 2
-    else is_straight(hand) and is_flush(hand):
+    else:
+        is_straight(hand) and is_flush(hand)
         return 3
 
 def poker(hands):
