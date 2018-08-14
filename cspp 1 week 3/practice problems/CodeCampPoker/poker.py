@@ -19,7 +19,7 @@ def get_val(x):
         return 11
     elif x[0] == 'T':
         return 10
-    return int(x)
+    return int(x[0])
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
