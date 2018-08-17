@@ -22,6 +22,8 @@ def similarity(dict1, dict2):
     # print(dict1)
     dict2 = make_dict(input_2)
     # print(dict2)
+    dict_temp1 = {}
+    dict_temp2 = {}
     stop_words = load_stopwords(r)
     dict_temp1 = del.dict1[stop_words]
     print(dict_temp1)
