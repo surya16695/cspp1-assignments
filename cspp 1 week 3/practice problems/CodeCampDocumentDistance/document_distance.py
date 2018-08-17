@@ -30,8 +30,8 @@ def similarity(dict1, dict2):
     dict_1 = make_dict(dict1)
     dict_2 = make_dict(dict2)
     word_stop = load_stopwords('stopwords.txt')
-    dict_temp1 = Delete(dict_1, word_stop)
-    dict_temp2 = Delete(dict_2, word_stop)
+    # dict_temp1 = Delete(dict_1, word_stop)
+    # dict_temp2 = Delete(dict_2, word_stop)
     dict_temp3 = adding(dict_temp1, dict_temp2)
     return computation(dict_temp3)
 
@@ -43,11 +43,11 @@ def adding(dict1, dict2):
     return dict_t
 
 
-def Delete(dict_a, dict_b):
-    for word in dict_a:
-        if word in dict_b:
-            del dict_a[word]
-    return dict_a
+# def Delete(dict_a, dict_b):
+#     for word in dict_a:
+#         if word in dict_b:
+#             del dict_a[word]
+#     return dict_a
 
 
 def load_stopwords(filename):
@@ -63,8 +63,9 @@ def load_stopwords(filename):
 
 def make_dict(input):
     dict_A = {}
+    word_stop = load_stopwords('stopwords.txt')
     for word in input:
-        if word not in dict_A:
+        if word not in dict_A and not in word_stop:
             dict_A[word] = 1
         else:
             dict_A[word] += 1
