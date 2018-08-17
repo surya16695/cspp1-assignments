@@ -157,7 +157,6 @@ def get_val(x):
     #    ha = line.split(" ")
     #    HANDS.append(ha)
     # test the poker function to see how it works'''
-    '''Poker Program'''
 def ranks(hand):
     '''Sorting rank function'''
     return sorted(['--23456789TJQKA'.index(c) for c, s in hand], reverse=True)
