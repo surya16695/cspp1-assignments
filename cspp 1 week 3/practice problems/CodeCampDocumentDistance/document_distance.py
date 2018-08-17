@@ -9,10 +9,8 @@ def similarity(dict1, dict2):
     word_stop = load_stopwords('stopwords.txt')
     input_1 = []
     input_2 = []
-    input_1 = input1.lower()
-    input_2 = input2.lower()
-    dict1 = {}
-    dict2 = {}
+    input_1 = dict1.lower()
+    input_2 = dict2.lower()
     input_1 = input_1.strip().replace('.', '').replace(',', '').replace('?', '').split()
     #print(input_1)
     input_2 = input_2.strip().replace('.', '').replace(',', '').replace('?', '').split()
@@ -54,8 +52,6 @@ def main():
     '''
         take two inputs and call the similarity function
     '''
-    input1 = []
-    input2 = []
     input1 = input()
     input2 = input()
 
