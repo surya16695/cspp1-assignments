@@ -75,27 +75,27 @@ def get_val(x):
 
 
 #def is_flush(hand):
-    '''
-        How do we find out if the given hand is a flush?
-        The hand has a list of cards represented as strings.
-        Do we need both the characters in the string? No.
-        The second character is good enough to determine a flush
-        Think of an algorithm: given the card suite how to check if it is a flush
-        Write the code for it and return True if it is a flush else return False
-    '''
+'''
+    How do we find out if the given hand is a flush?
+    The hand has a list of cards represented as strings.
+    Do we need both the characters in the string? No.
+    The second character is good enough to determine a flush
+    Think of an algorithm: given the card suite how to check if it is a flush
+    Write the code for it and return True if it is a flush else return False
+'''
     #for i in range(len(hand)-1):
     #    if hand[i][1] != (hand[i+1][1]):
     #        return False
     #return True
 
 #def hand_rank(hand):
-    '''
-        You will code this function. The goal of the function is to
-        return a value that max can use to identify the best hand.
-        As this function is complex we will progressively develop it.
-        The first version should identify if the given hand is a straight
-        or a flush or a straight flush.
-    '''
+'''
+    You will code this function. The goal of the function is to
+    return a value that max can use to identify the best hand.
+    As this function is complex we will progressively develop it.
+    The first version should identify if the given hand is a straight
+    or a flush or a straight flush.
+'''
 
     # By now you should have seen the way a card is represented.
     # If you haven't then go the main or poker function and print the hands
@@ -128,15 +128,15 @@ def get_val(x):
     #return 1
 
 #def poker(hands):
-    '''
-        This function is completed for you. Read it to learn the code.
+'''
+    This function is completed for you. Read it to learn the code.
 
-        Input: List of 2 or more poker hands
-               Each poker hand is represented as a list
-               Print the hands to see the hand representation
+    Input: List of 2 or more poker hands
+           Each poker hand is represented as a list
+           Print the hands to see the hand representation
 
-        Output: Return the winning poker hand
-    '''
+    Output: Return the winning poker hand
+'''
 
     # the line below may be new to you
     # max function is provided by python library
