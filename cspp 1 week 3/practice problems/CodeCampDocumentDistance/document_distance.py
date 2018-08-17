@@ -8,8 +8,8 @@ def clean(input_string):
     input_string = input_string.lower()
     regex = re.compile('[^a-z ]')
     input_string = regex.sub('', input_string)
-    print(input_string)
-    return input_string
+    # print(input_string)
+    return input_string.split()
 
 
 def computation(dict):
@@ -75,7 +75,7 @@ def make_dict(input):
                 dict_A[word] = 1
             else:
                 dict_A[word] += 1
-    print(dict_A)
+    # print(dict_A)
     return dict_A
 def main():
     '''
