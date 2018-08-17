@@ -4,7 +4,7 @@
 import re
 
 def clean(input_string):
-    input_string = input1.lower()
+    input_string = input_string.lower()
     regex = re.compile('(^a-z)')
     input_string = regex.sub('', input_string)
     return input_string
@@ -77,8 +77,6 @@ def main():
     '''
         take two inputs and call the similarity function
     '''
-    input1 = []
-    input2 = []
     input1 = input()
     input2 = input()
     print(similarity(input1, input2))
