@@ -17,7 +17,7 @@ def computation(dict):
     print(numerator)
     denominator1 = math.sqrt(sum(value[0]**2 for value in dict.values()))
     print(denominator1)
-    denominator2 = math.sqrt(sum(value[0]**2 for value in dict.values()))
+    denominator2 = math.sqrt(sum(value[1]**2 for value in dict.values()))
     print(denominator2)
     return (numerator/(denominator1*denominator2))
 
