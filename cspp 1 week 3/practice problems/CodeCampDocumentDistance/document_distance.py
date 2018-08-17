@@ -54,6 +54,8 @@ def main():
     '''
         take two inputs and call the similarity function
     '''
+    input1 = []
+    input2 = []
     input1 = input()
     input2 = input()
 
