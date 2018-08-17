@@ -2,6 +2,7 @@
     Document Distance - A detailed description is given in the PDF
 '''
 import re
+import math
 
 def clean(input_string):
     input_string = input_string.lower()
