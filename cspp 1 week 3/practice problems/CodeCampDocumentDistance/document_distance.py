@@ -26,7 +26,8 @@ def similarity(dict1, dict2):
     #print(input_1)
     #dict2 = dict2.strip().replace('.', '').replace(',', '').replace('?', '').split()
     #print(input_2)
-
+    dict1 = clean(dict1)
+    dict2 = clean(dict2)
     dict_1 = make_dict(dict1)
     dict_2 = make_dict(dict2)
     word_stop = load_stopwords('stopwords.txt')
