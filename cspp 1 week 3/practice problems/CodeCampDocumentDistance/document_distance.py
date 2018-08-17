@@ -29,9 +29,9 @@ def main():
     input2 = input2.lower()
     #print(input1)
     #print(input2)
-    input_1 = input1.strip().split()
+    input_1 = input1.strip().replace('.', '').replace(',', '').replace('?', '').split()
     print(input_1)
-    input_2 = input2.strip().split()
+    input_2 = input2.strip().replace('.', '').replace(',', '').replace('?', '').split()
     print(input_2)
     print(similarity(input1, input2))
 
