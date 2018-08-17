@@ -19,12 +19,13 @@ def load_stopwords(filename):
             stopwords[line.strip()] = 0
     return stopwords
 def make_dict(input):
-	for word in input:
-    	if word not in dict1:
-    		dict1[word] = 1
-    	else :
-    		dict1[word] += 1
-    return dict1
+    dict_1 = {}
+    for word in input:
+        if word not in dict_1:
+            dict_1[word] = 1
+        else:
+            dict_1[word] += 1
+    return dict_1
 def main():
     '''
         take two inputs and call the similarity function
