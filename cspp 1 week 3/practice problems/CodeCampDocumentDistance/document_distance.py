@@ -18,7 +18,7 @@ def load_stopwords(filename):
         for line in filename:
             stopwords[line.strip()] = 0
     return stopwords
-def make_dict(input)
+def make_dict(input):
 	for word in input:
     	if word not in dict1:
     		dict1[word] = 1
