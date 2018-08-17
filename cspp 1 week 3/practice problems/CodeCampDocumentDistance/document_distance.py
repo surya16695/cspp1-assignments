@@ -14,8 +14,11 @@ def clean(input_string):
 
 def computation(dict):
     numerator = sum(value[0]*value[1] for value in dict.values())
+    print(numerator)
     denominator1 = math.sqrt(sum(value[0]**2 for value in dict.values()))
+    print(denominator1)
     denominator2 = math.sqrt(sum(value[0]**2 for value in dict.values()))
+    print(denominator2)
     return (numerator/(denominator1*denominator2))
 
 def similarity(dict1, dict2):
