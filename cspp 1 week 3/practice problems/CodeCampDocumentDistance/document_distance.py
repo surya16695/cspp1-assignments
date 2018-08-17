@@ -7,6 +7,8 @@ def similarity(dict1, dict2):
         Compute the document distance as given in the PDF
     '''
     word_stop = load_stopwords('stopwords.txt')
+    input_1 = []
+    input_2 = []
     input_1 = input1.lower()
     input_2 = input2.lower()
     dict1 = {}
