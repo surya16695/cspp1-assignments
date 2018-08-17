@@ -3,7 +3,7 @@
     Read about poker hands here.
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
-'''dec_k = ['AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'KD', 'JD', 'QD'
+dec_k = ['AD', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', 'TD', 'KD', 'JD', 'QD'
          'AH', '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', 'TH', 'KH', 'JH', 'QH', 
          'AS', '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', 'TS', 'KS', 'JS', 'QS', 
          'AC', '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', 'TC', 'KC', 'JC', 'QC']
@@ -21,44 +21,43 @@ def get_val(x):
         return 10
     return int(x[0])
     
-def is_fullhouse(hand):
-    hand_temp_2 = sorted(hand, key=get_val)
-    for i in range (j=hand_temp_2):
-        if is_threeof_kind(hand_temp_2):
+#def is_fullhouse(hand):
+    #hand_temp_2 = sorted(hand, key=get_val)
+    #for i in range (j=hand_temp_2):
+    #    if is_threeof_kind(hand_temp_2):
 
 
-def is_fourof_kind(hand):
-    '''
-    if there are four cards of same value but different
-        kinds then such cards are said to be in four of a kind:'''
-    count_1 = 0
-    hand_temp_1 = sorted(hand, key=get_val)
-    for i in range(len(hand_temp_1)-1):
-        if ((get_val(hand_temp_1[i+1])) - get_val(hand_temp_1[i])) == 0:
-            count_1 += 1
-    if count_1 == 3:
-        return True
-    return False
-def is_threeof_kind(hand):
-    count_1 = 0
-    hand_temp_1 = sorted(hand, key=get_val)
-    for i in range(len(hand_temp_1)-1):
-        if ((get_val(hand_temp_1[i+1])) - get_val(hand_temp_1[i])) == 0:
-            count_1 += 1
-    if count_1 == 2:
-        return True
-    return False
-def is_onepair(hand):
-    count_1 = 0
-    hand_temp_1 = sorted(hand, key=get_val)
-    for i in range(len(hand_temp_1)-1):
-        if ((get_val(hand_temp_1[i+1])) - get_val(hand_temp_1[i])) == 0:
-            count_1 += 1
-    if count_1 == 1:
-        return True
-    return False
+#def is_fourof_kind(hand):
+#if there are four cards of same value but different
+    #    kinds then such cards are said to be in four of a kind:'''
+    #count_1 = 0
+    #hand_temp_1 = sorted(hand, key=get_val)
+    #for i in range(len(hand_temp_1)-1):
+    #    if ((get_val(hand_temp_1[i+1])) - get_val(hand_temp_1[i])) == 0:
+    #        count_1 += 1
+    #if count_1 == 3:
+    #    return True
+    #return False
+#def is_threeof_kind(hand):
+    #count_1 = 0
+    #hand_temp_1 = sorted(hand, key=get_val)
+    #for i in range(len(hand_temp_1)-1):
+    #    if ((get_val(hand_temp_1[i+1])) - get_val(hand_temp_1[i])) == 0:
+    #        count_1 += 1
+    #if count_1 == 2:S
+    #    return True
+    #return False
+#def is_onepair(hand):
+    #count_1 = 0
+    #hand_temp_1 = sorted(hand, key=get_val)
+    #for i in range(len(hand_temp_1)-1):
+        #if ((get_val(hand_temp_1[i+1])) - get_val(hand_temp_1[i])) == 0:
+            #count_1 += 1
+    #if count_1 == 1:
+        #return True
+    #return False
 
-def is_straight(hand):
+#def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
         The hand has a list of cards represented as strings.
@@ -68,15 +67,15 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    hand_temp = sorted(hand, key=get_val)
+    #hand_temp = sorted(hand, key=get_val)
     #print(hand_temp)
-    for i  in range (len(hand_temp)-1):
-        if (get_val(hand_temp[i+1]) - get_val(hand_temp[i])) != 1:
-            return False
-    return True
+    #for i  in range (len(hand_temp)-1):
+    #    if (get_val(hand_temp[i+1]) - get_val(hand_temp[i])) != 1:
+    #        return False
+    #return True
 
 
-def is_flush(hand):
+#def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
         The hand has a list of cards represented as strings.
@@ -85,14 +84,14 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    for i in range(len(hand)-1):
-        if hand[i][1] != (hand[i+1][1]):
-            return False
-    return True
+    #for i in range(len(hand)-1):
+    #    if hand[i][1] != (hand[i+1][1]):
+    #        return False
+    #return True
 
     
 
-def hand_rank(hand):
+#def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
         return a value that max can use to identify the best hand.
@@ -117,21 +116,21 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best han
 
-    if is_straight(hand) and is_flush(hand):
-        return 8
-    if is_fourof_kind(hand):
-        return 7
-    if is_flush(hand):
-        return 5
-    if is_straight(hand):
-        return 4
-    if is_threeof_kind(hand):
-        return 3
-    if is_onepair(hand):
-        return 2
-    return 1
+    #if is_straight(hand) and is_flush(hand):
+    #    return 8
+    #if is_fourof_kind(hand):
+    #    return 7
+    #if is_flush(hand):
+    #    return 5
+    #if is_straight(hand):
+    #    return 4
+    #if is_threeof_kind(hand):
+    #    return 3
+    #if is_onepair(hand):
+    #    return 2
+    #return 1
 
-def poker(hands):
+#def poker(hands):
     '''
         This function is completed for you. Read it to learn the code.
 
@@ -149,17 +148,17 @@ def poker(hands):
     # hand_rank is a function passed to max
     # hand_rank takes a hand and returns its rank
     # max uses the rank returned by hand_rank and returns the best hand
-    return max(hands, key=hand_rank)
+    #SSSSSreturn max(hands, key=hand_rank)
 
-if __name__ == "__main__":
+#if __name__ == "__main__":
     # read the number of test cases
-    COUNT = int(input())
+    #COUNT = int(input())
     # iterate through the test cases to set up hands list
-    HANDS = []
-    for x in range(COUNT):
-        line = input()
-        ha = line.split(" ")
-        HANDS.append(ha)
+    #HANDS = []
+    #for x in range(COUNT):
+    #    line = input()
+    #    ha = line.split(" ")
+    #    HANDS.append(ha)
     # test the poker function to see how it works'''
     '''Poker Program'''
 def ranks(hand):
