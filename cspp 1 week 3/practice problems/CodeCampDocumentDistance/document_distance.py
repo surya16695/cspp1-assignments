@@ -28,9 +28,7 @@ def similarity(dict1, dict2):
     #print(input_2)
 
     dict_1 = make_dict(dict1)
-    print(dict_1)
     dict_2 = make_dict(dict2)
-    print(dict_2)
     word_stop = load_stopwords('stopwords.txt')
     # dict_temp1 = Delete(dict_1, word_stop)
     # dict_temp2 = Delete(dict_2, word_stop)
@@ -66,6 +64,7 @@ def load_stopwords(filename):
 def make_dict(input):
     dict_A = {}
     word_stop = load_stopwords('stopwords.txt')
+    print(word_stop)
     for word in input:
         if word not in dict_A and word not in word_stop:
             dict_A[word] = 1
