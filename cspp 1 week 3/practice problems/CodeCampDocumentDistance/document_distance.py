@@ -34,9 +34,9 @@ def similarity(dict1, dict2):
     dict1 = clean(dict1)
     dict2 = clean(dict2)
     dict_1 = make_dict(dict1)
-    print(dict_1)
+    #print(dict_1)
     dict_2 = make_dict(dict2)
-    print(dict_2)
+    #print(dict_2)
     word_stop = load_stopwords('stopwords.txt')
     # dict_temp1 = Delete(dict_1, word_stop)
     # dict_temp2 = Delete(dict_2, word_stop)
@@ -48,7 +48,8 @@ def adding(dict1, dict2):
     dict_t = {}
     for word in dict1:
         if word in dict2:
-            dict_t[word] = [dict1.get(word), dict2.get(word)] 
+            dict_t[word] = [dict1.get(word), dict2.get(word)]
+    print(dict_t)
     return dict_t
 
 
