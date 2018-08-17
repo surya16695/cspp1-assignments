@@ -29,7 +29,7 @@ def is_fullhouse(hand):
 
 def is_fourof_kind(hand):
     '''
-        if there are four cards of same value but different
+    if there are four cards of same value but different
         kinds then such cards are said to be in four of a kind:'''
     count_1 = 0
     hand_temp_1 = sorted(hand, key=get_val)
