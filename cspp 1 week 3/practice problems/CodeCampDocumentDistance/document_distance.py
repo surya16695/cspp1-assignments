@@ -38,6 +38,7 @@ def similarity(dict1, dict2):
 
     
 def adding(dict1, dict2):
+    dict_t = {}
     for word in dict1:
         if word in dict2:
             dict_t[word] = [dict1.get(word), dict2.get(word)] 
