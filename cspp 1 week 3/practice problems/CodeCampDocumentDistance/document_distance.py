@@ -11,9 +11,9 @@ def similarity(dict1, dict2):
     dict_1 = ""
     dict_2 = ""
     word_stop = load_stopwords('stopwords.txt')
-    dict_1 = dict1 - word_stop
+    dict_1 = dict1 - word_stop.keys()
     print(dict_1)
-    dict_2 = 2 - word_stop
+    dict_2 = 2 - word_stop.keys()
     print(dict_2)
 
 def load_stopwords(filename):
