@@ -8,8 +8,8 @@ def similarity(dict1, dict2):
     '''
     #dict1 = make_dict(input_1)
     #dict2 = make_dict(input_2)
-    dict_1 = []
-    dict_2 = []
+    dict_1 = ""
+    dict_2 = ""
     word_stop = load_stopwords('stopwords.txt')
     dict_1 = dict1 - word_stop
     print(dict_1)
