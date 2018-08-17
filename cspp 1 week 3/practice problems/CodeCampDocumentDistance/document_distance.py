@@ -9,7 +9,7 @@ def clean(input_string):
     input_string = regex.sub('', input_string)
     return input_string
 
-    
+
 def computation(dict):
     numerator = sum(values[0]*values[1] for value in dict.values())
     denoinator1 = math.sqrt(sum(value[0]**2 for value in dict.values()))
@@ -46,7 +46,7 @@ def adding(dict1, dict2):
 def Delete(dict_a, dict_b):
     for word in dict_a:
         if word in dict_b:
-            del dict_a(word)
+            del dict_a[word]
     return dict_a
 
 
