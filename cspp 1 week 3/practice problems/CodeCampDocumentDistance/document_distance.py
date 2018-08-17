@@ -11,7 +11,7 @@ def clean(input_string):
 
 
 def computation(dict):
-    numerator = sum(values[0]*values[1] for value in dict.values())
+    numerator = sum(value[0]*value[1] for value in dict.values())
     denoinator1 = math.sqrt(sum(value[0]**2 for value in dict.values()))
     denoinator2 = math.sqrt(sum(value[0]**2 for value in dict.values()))
     return (numerator/(denominator1*denominator2))
