@@ -13,7 +13,7 @@ def similarity(dict1, dict2):
     word_stop = load_stopwords('stopwords.txt')
     dict_1 = dict1 - word_stop
     print(dict_1)
-    dict_2 = dict2 - word_stop
+    dict_2 = 2 - word_stop
     print(dict_2)
 
 def load_stopwords(filename):
@@ -26,14 +26,14 @@ def load_stopwords(filename):
             stopwords[line.strip()] = 0
     return stopwords
 def make_dict(input):
-    dict_1 = {}
+    dict_A = {}
     for word in input:
-        if word not in dict_1:
-            dict_1[word] = 1
+        if word not in dict_A:
+            dict_A[word] = 1
         else:
-            dict_1[word] += 1
+            dict_A[word] += 1
     #print(dict_1)
-    return dict_1
+    return dict_A
 def main():
     '''
         take two inputs and call the similarity function
