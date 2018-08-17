@@ -12,12 +12,12 @@ def clean(input_string):
     return input_string.split()
 
 
-def computation(dict):
+def computation(dict, dict_1, dict_2):
     numerator = sum(value[0]*value[1] for value in dict.values())
     print(numerator)
-    denominator1 = math.sqrt(sum(value[0]**2 for value in dict.values()))
+    denominator1 = math.sqrt(sum(value**2 for value in dict_1.values()))
     print(denominator1)
-    denominator2 = math.sqrt(sum(value[1]**2 for value in dict.values()))
+    denominator2 = math.sqrt(sum(value**2 for value in dict_2.values()))
     print(denominator2)
     return (numerator/(denominator1*denominator2))
 
@@ -41,7 +41,7 @@ def similarity(dict1, dict2):
     # dict_temp1 = Delete(dict_1, word_stop)
     # dict_temp2 = Delete(dict_2, word_stop)
     dict_temp3 = adding(dict_1, dict_2)
-    return computation(dict_temp3)
+    return computation(dict_temp3, dict_1, dict_2)
 
     
 def adding(dict1, dict2):
