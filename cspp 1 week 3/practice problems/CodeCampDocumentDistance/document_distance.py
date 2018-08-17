@@ -65,7 +65,7 @@ def make_dict(input):
     dict_A = {}
     word_stop = load_stopwords('stopwords.txt')
     for word in input:
-        if word not in dict_A and not in word_stop:
+        if word not in dict_A and word not in word_stop:
             dict_A[word] = 1
         else:
             dict_A[word] += 1
