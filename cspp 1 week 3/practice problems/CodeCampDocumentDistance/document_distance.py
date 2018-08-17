@@ -28,7 +28,9 @@ def similarity(dict1, dict2):
     #print(input_2)
 
     dict_1 = make_dict(dict1)
+    print(dict_1)
     dict_2 = make_dict(dict2)
+    print(dict_2)
     word_stop = load_stopwords('stopwords.txt')
     # dict_temp1 = Delete(dict_1, word_stop)
     # dict_temp2 = Delete(dict_2, word_stop)
