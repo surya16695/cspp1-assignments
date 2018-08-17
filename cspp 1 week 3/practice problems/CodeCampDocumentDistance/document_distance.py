@@ -67,10 +67,11 @@ def make_dict(input):
     word_stop = load_stopwords('stopwords.txt')
     #print(word_stop)
     for word in input:
-        if word not in dict_A and word not in word_stop:
-            dict_A[word] = 1
-        else:
-            dict_A[word] += 1
+        if word not in word_stop:
+            if word not in dict_A:
+                dict_A[word] = 1
+            else:
+                dict_A[word] += 1
     print(dict_A)
     return dict_A
 def main():
