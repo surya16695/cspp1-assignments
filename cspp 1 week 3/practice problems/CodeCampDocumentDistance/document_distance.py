@@ -9,7 +9,6 @@ def similarity(dict1, dict2):
     # dict1_temp = dict1.lower()
     # dict2_temp = dict2.lower()
     word_stop = load_stopwords('stopwords.txt')
-    dict2_temp
 
 
 def load_stopwords(filename):
@@ -28,7 +27,7 @@ def make_dict(input):
             dict_1[word] = 1
         else:
             dict_1[word] += 1
-    print(dict_1)
+    #print(dict_1)
     return dict_1
 def main():
     '''
@@ -36,8 +35,10 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    input_1 = make_dict(input1.lower())
-    input_2 = make_dict(input2.lower())
+    input_1 = input1.lower()
+    print(input_1)
+    input_2 = input2.lower()
+    print(input_2)
     print(similarity(input_1, input_2))
 
 if __name__ == '__main__':
