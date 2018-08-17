@@ -27,9 +27,12 @@ def main():
     input2 = input()
     input1 = input1.lower()
     input2 = input2.lower()
-    print(input1)
-    print(input2)
-
+    #print(input1)
+    #print(input2)
+    input_1 = input1.strip().split()
+    print(input_1)
+    input_2 = input2.strip().split()
+    print(input_2)
     print(similarity(input1, input2))
 
 if __name__ == '__main__':
