@@ -81,7 +81,6 @@ def build_search_index(docs):
     return dic_5
 
 def index(dic_4):
-    index_1 = {}
     for key in dic_4.keys():
         coun_t = 0
         for word in dic_4[key]:
