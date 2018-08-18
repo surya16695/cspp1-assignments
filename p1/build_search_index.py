@@ -23,8 +23,8 @@
 import re
 def make_dict(input):
     dict_1 = {}
-    for i in range (len(documents)):
-        dict_1[i] += documents[i]
+    for i in range (len(input)):
+        dict_1[i] += input[i]
     print(dict_1)
     return dict_1
 
