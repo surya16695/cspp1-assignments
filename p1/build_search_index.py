@@ -87,8 +87,8 @@ def index(dic_4):
     for i in dic_4.keys():
         coun_t = 1
         k = 0
-        while k < dic_4.keys():
-            if k not in dic_4[k].keys():
+        while k < i :
+            if k in dic_4[k].keys():
                 index_1[k] = (i, coun_t+1)
         k = k+1
     return index_1
