@@ -83,7 +83,7 @@ def build_search_index(docs):
         for  word in dic_4[i]:
             if word in dic_4.values():
                 coun_t += 1
-            return word = [(i, coun_t)]
+            return print (word = [(i, coun_t)])
 
 
 
