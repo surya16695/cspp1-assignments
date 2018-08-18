@@ -88,8 +88,8 @@ def index(dic_4):
     for i in dic_4.keys():
         coun_t = 1
         k = 0
-        if word in dic_4[i].keys():
-            index_1[word] = (i, coun_t+1)
+        if key in dic_4[i].keys():
+            index_1[key] = (i, coun_t+1)
     return index_1
 
     # keep track of doc_id which is the list index corresponding the document
