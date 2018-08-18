@@ -75,7 +75,7 @@ def build_search_index(docs):
     dic_3 = {}
     dic_4 = {}
     # iterate through all the docs
-    dic_2 = make_dict(documents)
+    dic_2 = make_dict(docs)
     dic_3 = word_list(dic_2)
     dic_4 = computing(dic_3)
     for i in dic_4.keys():
