@@ -57,6 +57,7 @@ def word_list(dict_0):
 
 def computing(dict):
     word_s = load_stopwords('stopwords.txt')
+    print(word_s)
     for key in dict:
         for word in dict[key]:
             if word in word_s:
