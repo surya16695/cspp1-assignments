@@ -21,7 +21,7 @@
     }
 '''
 import re
-def make_dict(document, lines)
+def make_dict(documents, lines)
     dict_1 = {}
     for i in range of lines:
         dict_1[i] = document[i]
