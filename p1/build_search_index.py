@@ -78,7 +78,7 @@ def build_search_index(docs):
     dic_2 = make_dict(documents)
     dic_3 = word_list(dic_2)
     dic_4 = computing(dic_3)
-    for i in range of dic_4.key():
+    for i in range dic_4.key():
         coun_t = 0
         for  word in dic_4[i]:
             if word in dic_4.values():
