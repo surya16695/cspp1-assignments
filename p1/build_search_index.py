@@ -80,7 +80,7 @@ def build_search_index(docs):
     dic_5 = index(dic_4)
     return dic_5
 
-def index(dic_4)
+def index(dic_4):
     while True:
         for key in keys:
             coun_t = 0
