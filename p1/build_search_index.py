@@ -21,12 +21,12 @@
     }
 '''
 import re
-# def make_dict(documents, lines)
-#     dict_1 = {}
-#     for i in range of lines:
-#         dict_1[i] = document[i]
-#     print(dict_1)
-#     return dict_1
+def make_dict(documents)
+    dict_1 = {}
+    for i in range (len(documents)):
+        dict_1[i] += documents[i]
+    print(dict_1)
+    return dict_1
 
 
 # helper function to load the stop words from a file
@@ -99,7 +99,7 @@ def main():
         documents.append(input())
         i += 1
     print(documents)
-    #dic_2 = make_dict(documents, lines)
+    dic_2 = make_dict(documents)
     
     # call print to display the search index
     #print_search_index(build_search_index(documents))
