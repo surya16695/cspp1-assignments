@@ -91,8 +91,8 @@ def index(dic_4):
     coun_t = 1
     k = 0
     while i in dict_temp.keys():
-        if word in dict_temp[key]:
-            index_1[word] = (key, coun_t+1)
+        if values in dict_temp[key]:
+            index_1[values] = (key, coun_t+1)
         i = i+1
     print (dict_temp)
     return index_1
