@@ -62,7 +62,7 @@ def computing(dict):
         for word in dict[key]:
             if word in word_s:
                 dict[key] = dict[key] - word_s.keys()
-    #print(dict)
+    print(dict)
     return dict.values()
 def build_search_index(docs):
     '''
@@ -76,10 +76,10 @@ def build_search_index(docs):
     # iterate through all the docs
     dic_2 = make_dict(docs)
     dic_3 = word_list(dic_2)
-    print (dic_3)
+    #print (dic_3)
     dic_4 = computing(dic_3)
     dic_5 = index(dic_4)
-    print(dic_4)
+    #print(dic_4)
     return dic_5
 
 def index(dic_4):
