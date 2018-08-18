@@ -60,7 +60,7 @@ def computing(dict):
     for key in dict:
         for word in dict[key]:
             if word in word_s:
-                dict[key] = dict[key].remove(word)
+                dict[key] = dict[key].replace(word, '')
     print(dict)
     return dict
 def build_search_index(docs):
