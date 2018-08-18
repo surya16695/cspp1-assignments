@@ -90,9 +90,11 @@ def index(dic_4):
         dict_temp[i] = str(dic_4[i])
     coun_t = 1
     k = 0
-    for key in dict_temp:
+    while i in dict_temp.keys():
         if word in dict_temp[key]:
             index_1[word] = (key, coun_t+1)
+        i = i+1
+    print (dict_temp)
     return index_1
 
     # keep track of doc_id which is the list index corresponding the document
