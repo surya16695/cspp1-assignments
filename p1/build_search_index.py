@@ -98,7 +98,8 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-    dic_2 = make_dict(document, lines)
+    print(documents)
+    dic_2 = make_dict(documents, lines)
     
     # call print to display the search index
     #print_search_index(build_search_index(documents))
