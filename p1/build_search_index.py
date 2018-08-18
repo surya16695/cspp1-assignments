@@ -82,7 +82,7 @@ def build_search_index(docs):
 
 def index(dic_4):
     while True:
-        for key in keys:
+        for key in dic_4.keys():
             coun_t = 0
             for word in dic_4[key]:
                 if word in values:
