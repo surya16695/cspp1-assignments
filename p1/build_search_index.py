@@ -51,8 +51,9 @@ def word_list(dict_0):
         dict_0[key] = dict_0[key].lower()
         regex = re.compile('[^a-z ]')
         dict_0[key] = regex.sub('', dict_0[key])
+        dict_0[key] = dict_0[key].split()
     print(dict_0)
-    return dict_0.split()
+    return dict_0
 
 def computing(dict):
     word_s = load_stopwords('stopwords.txt')
