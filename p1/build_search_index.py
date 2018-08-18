@@ -59,9 +59,9 @@ def computing(dict):
     word_s = load_stopwords('stopwords.txt')
     #print(word_s)
     for key in dict:
-        for key in dict[key]:
+        for word in dict[key]:
             if word in word_s:
-                dict[word] = dict[key] - word_s.keys()
+                dict[key] = dict[key] - word_s.keys()
 
     return dict
 
