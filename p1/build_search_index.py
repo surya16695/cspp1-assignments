@@ -21,7 +21,7 @@
     }
 '''
 import re
-def make_dict(documents)
+def make_dict(list)
     dict_1 = {}
     for i in range (len(documents)):
         dict_1[i] += documents[i]
