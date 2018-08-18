@@ -62,8 +62,8 @@ def computing(dict):
         for word in dict[key]:
             if word in word_s:
                 dict[key] = dict[key] - word_s.keys()
-    print(dict)
-    return dict.values()
+    return dict
+    
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -87,7 +87,7 @@ def index(dic_4):
     for i in dic_4.keys():
         coun_t = 1
         for j in dic_4[i].keys(): 
-            if j in dic_4[i].values():
+            if key in dic_4[i].keys:
                 index_1[j] = (i, coun_t+1)
     return index_1
 
