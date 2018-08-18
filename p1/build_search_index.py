@@ -82,13 +82,12 @@ def build_search_index(docs):
 
 def index(dic_4):
     index = {}
-    print (dict_4.values())
     for key in dic_4.keys():
         coun_t = 0
         for word in dic_4[key]:
-
             if word in dic_4.values():
                 index[word] = (key, coun_t+1)
+        return index
 
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
