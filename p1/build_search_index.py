@@ -88,6 +88,7 @@ def index(dic_4):
     dict_temp = {}
     for i in dic_4.keys():
         dict_temp[i] = str(dic_4[i])
+    print (dict_temp)
     coun_t = 1
     k = 0
     while i in dict_temp.keys():
