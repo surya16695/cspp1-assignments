@@ -78,6 +78,7 @@ def build_search_index(docs):
     dic_3 = word_list(dic_2)
     dic_4 = computing(dic_3)
     dic_5 = index(dic_4)
+    print(dic_4.values())
     return dic_5
 
 def index(dic_4):
@@ -127,7 +128,6 @@ def main():
     #print(documents)
  
     # call print to display the search index
-    print(dic_4.values())
     print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
