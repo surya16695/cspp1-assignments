@@ -58,9 +58,8 @@ def computing(dict):
     word_s = load_stopwords('stopwords.txt')
     for key in dict:
         for word in dict[key]:
-            if word not in word_s:
-                if word not in dict:
-                    dict[key] = del dict[key](word)
+            if word in word_s:
+                dict[key] =dict[key]remove(word)
     print(dict)
     return dict
 def build_search_index(docs):
@@ -108,8 +107,8 @@ def main():
         i += 1
     print(documents)
     dic_2 = make_dict(documents)
-    dic_2 = word_list(dic_2)
     dic_2 = computing(dic_2)
+    dic_2 = word_list(dic_2)
     # call print to display the search index
     #print_search_index(build_search_index(documents))
 
