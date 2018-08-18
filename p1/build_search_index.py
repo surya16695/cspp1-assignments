@@ -88,7 +88,7 @@ def index(dic_4):
                 if word in dic_4.values():
                     index[word] = (key, coun_t+1)
         break
-    return index
+    return print(index)
 
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
