@@ -60,7 +60,7 @@ def computing(dict):
         for word in dict[key]:
             if word not in word_s:
                 if word not in dict:
-                    dict[key] = dict[key].remove(word)
+                    dict[key] = del dict[key](word)
     print(dict)
     return dict
 def build_search_index(docs):
