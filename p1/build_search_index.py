@@ -25,7 +25,7 @@ def make_dict(input):
     dict_1 = {}
     for i in range (len(input)):
         dict_1[i] = input[i]
-    print(dict_1)
+    #print(dict_1)
     return dict_1
 
 
@@ -77,15 +77,7 @@ def build_search_index(docs):
     dic_2 = make_dict(docs)
     dic_3 = word_list(dic_2)
     dic_4 = computing(dic_3)
-    for i in dic_4.keys():
-        coun_t = 0
-        for  word in dic_4[i]:
-            if word in dic_4.values():
-                coun_t += 1
-            word = [(i, coun_t)]
-    return word
-
-
+    return (dic_4)
 
 
     # keep track of doc_id which is the list index corresponding the document
@@ -101,13 +93,13 @@ def build_search_index(docs):
 
 # helper function to print the search index
 # use this to verify how the search index looks
-# def print_search_index(index):
-#     '''
-#         print the search index
-#     '''
-#     keys = sorted(index.keys())
-#     for key in keys:
-#         print(key, " - ", index[key])
+def print_search_index(index):
+    '''
+        print the search index
+    '''
+    keys = sorted(index.keys())
+    for key in keys:
+        print(key, " - ", index[key])
 
 # main function that loads the docs from files
 def main():
@@ -126,7 +118,7 @@ def main():
     #print(documents)
  
     # call print to display the search index
-    print(build_search_index(documents))
+    print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()
