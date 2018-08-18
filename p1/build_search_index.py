@@ -85,11 +85,14 @@ def build_search_index(docs):
 
 def index(dic_4):
     index_1 = {}
+    dict_temp = {}
     for i in dic_4.keys():
-        coun_t = 1
-        k = 0
-        if key in dic_4[i].keys():
-            index_1[key] = (i, coun_t+1)
+        dict_temp[i] = str(dic_4[i])
+    coun_t = 1
+    k = 0
+    for key in dict_temp:
+        if word in dict_temp[key]:
+            index_1[word] = (key, coun_t+1)
     return index_1
 
     # keep track of doc_id which is the list index corresponding the document
