@@ -61,8 +61,7 @@ def computing(dict):
     for key in dict:
         for word in dict[key]:
             if word in word_s:
-                dict[key] = [dict[key] - word_s.keys()]
-    print (dict)
+                dict[key] = dict[key] - word_s.keys()
     return dict
 
 def build_search_index(docs):
@@ -87,9 +86,11 @@ def index(dic_4):
     index_1 = {}
     for i in dic_4.keys():
         coun_t = 1
-        for j in dic_4[i].keys(): 
-            if key in dic_4[i].keys:
-                index_1[j] = (i, coun_t+1)
+        k = 0
+        while k < dic_4.keys():
+            if k not in dic_4[k].keys():
+                index_1[k] = (i, coun_t+1)
+        k = k+1
     return index_1
 
     # keep track of doc_id which is the list index corresponding the document
