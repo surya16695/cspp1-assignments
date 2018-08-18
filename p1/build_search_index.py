@@ -52,14 +52,14 @@ def word_list(dict_0):
         regex = re.compile('[^a-z ]')
         dict_0[key] = regex.sub('', dict_0[key])
     print(dict_0)
-    return dict_0
+    return dict_0.split()
 
 def computing(dict):
     word_s = load_stopwords('stopwords.txt')
     for key in dict:
         for word in dict[key]:
             if word in word_s:
-                dict[key] = dict[key].replace(word, "")
+                dict[key] = dict[key].pop(word)
     print(dict)
     return dict
 def build_search_index(docs):
