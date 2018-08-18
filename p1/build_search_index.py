@@ -85,7 +85,7 @@ def index(dic_4):
         for key in dic_4.keys():
             coun_t = 0
             for word in dic_4[key]:
-                if word in values:
+                if word in dic_4.values():
                     index[word] = (key, coun_t+1)
         break
     return index
