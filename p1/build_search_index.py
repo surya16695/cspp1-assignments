@@ -59,9 +59,10 @@ def computing(dict):
     word_s = load_stopwords('stopwords.txt')
     #print(word_s)
     for key in dict:
-        for word in dict[key]:
+        for key in dict[key]:
             if word in word_s:
                 dict[key] = dict[key] - word_s.keys()
+
     return dict
 
 def build_search_index(docs):
@@ -87,10 +88,8 @@ def index(dic_4):
     for i in dic_4.keys():
         coun_t = 1
         k = 0
-        while k < i :
-            if k in dic_4[k].keys():
-                index_1[k] = (i, coun_t+1)
-        k = k+1
+        if k in dic_4[k].keys():
+            index_1[k] = (i, coun_t+1)
     return index_1
 
     # keep track of doc_id which is the list index corresponding the document
