@@ -98,6 +98,8 @@ def main():
     '''
     # empty document list
     dic_2 = {}
+    dic_3 = {}
+    dic_4 = {}
     documents = []
     # iterate for n times
     lines = int(input())
@@ -107,8 +109,8 @@ def main():
         i += 1
     print(documents)
     dic_2 = make_dict(documents)
-    dic_2 = word_list(dic_2)
-    dic_2 = computing(dic_2)
+    dic_3 = word_list(dic_2)
+    dic_4 = computing(dic_3)
     # call print to display the search index
     #print_search_index(build_search_index(documents))
 
