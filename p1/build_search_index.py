@@ -52,7 +52,7 @@ def word_list(dict_0):
         regex = re.compile('[^a-z ]')
         dict_0[key] = regex.sub('', dict_0[key])
         dict_0[key] = dict_0[key].split()
-    print(dict_0)
+    #print(dict_0)
     return dict_0
 
 def computing(dict):
@@ -62,7 +62,7 @@ def computing(dict):
         for word in dict[key]:
             if word in word_s:
                 dict[key] = dict[key] - word_s.keys()
-    print(dict)
+    #print(dict)
     return dict
 def build_search_index(docs):
     '''
