@@ -58,7 +58,7 @@ def computing(dict):
     word_s = load_stopwords('stopwords.txt')
     for key in dict:
         for word in dict[key]:
-            if word not in word_stop:
+            if word not in word_s:
                 if word not in dict:
                     dict[key] -= word
     print(dict)
