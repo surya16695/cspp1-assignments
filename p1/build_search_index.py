@@ -85,8 +85,8 @@ def index(dic_4):
     index_1 = {}
     for i in dic_4.keys():
         coun_t = 0
-        for word in dic_4[i]:
-            if word in dic_4.values():
+        for j in i: 
+            if j[i] in dic_4.values.values():
                 index_1[word] = (key, coun_t+1)
     return index_1
 
