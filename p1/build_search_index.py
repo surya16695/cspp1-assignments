@@ -76,6 +76,7 @@ def build_search_index(docs):
     # iterate through all the docs
     dic_2 = make_dict(docs)
     dic_3 = word_list(dic_2)
+    print (dic_3)
     dic_4 = computing(dic_3)
     dic_5 = index(dic_4)
     print(dic_4.values())
@@ -86,8 +87,8 @@ def index(dic_4):
     for i in dic_4.keys():
         coun_t = 0
         for j in i: 
-            if j[i] in dic_4.values.values():
-                index_1[word] = (key, coun_t+1)
+            if word in dic_4.values.values():
+                index_1[] = (key, coun_t+1)
     return index_1
 
     # keep track of doc_id which is the list index corresponding the document
