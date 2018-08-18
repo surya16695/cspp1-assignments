@@ -57,7 +57,7 @@ def word_list(dict_0):
 
 def computing(dict):
     word_s = load_stopwords('stopwords.txt')
-    print(word_s)
+    #print(word_s)
     for key in dict:
         for word in dict[key]:
             if word in word_s:
@@ -71,7 +71,22 @@ def build_search_index(docs):
 
     # initialize a search index (an empty dictionary)
     index = {}
+    dic_2 = {}
+    dic_3 = {}
+    dic_4 = {}
     # iterate through all the docs
+    dic_2 = make_dict(documents)
+    dic_3 = word_list(dic_2)
+    dic_4 = computing(dic_3)
+    for i in range of dic_4.keys():
+        coun_t = 0
+        for  word in dic_4[i]:
+            if word in dic_4.values():
+                coun_t += 1
+            return word = [(key(), coun_t)]
+
+
+
 
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
@@ -79,6 +94,7 @@ def build_search_index(docs):
         # clean up doc and tokenize to words list
 
         # add or update the words of the doc to the search index
+
 
     # return search index
 
@@ -99,9 +115,7 @@ def main():
         main function
     '''
     # empty document list
-    dic_2 = {}
-    dic_3 = {}
-    dic_4 = {}
+
     documents = []
     # iterate for n times
     lines = int(input())
@@ -110,9 +124,7 @@ def main():
         documents.append(input())
         i += 1
     print(documents)
-    dic_2 = make_dict(documents)
-    dic_3 = word_list(dic_2)
-    dic_4 = computing(dic_3)
+ 
     # call print to display the search index
     #print_search_index(build_search_index(documents))
 
