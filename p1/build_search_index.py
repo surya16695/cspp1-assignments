@@ -82,10 +82,11 @@ def build_search_index(docs):
 
 def index(dic_4):
     index = {}
+    print (dict_4.values())
     for key in dic_4.keys():
         coun_t = 0
         for word in dic_4[key]:
-            print (dict_4.values())
+
             if word in dic_4.values():
                 index[word] = (key, coun_t+1)
 
