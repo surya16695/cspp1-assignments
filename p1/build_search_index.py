@@ -60,7 +60,7 @@ def computing(dict):
     #print(word_s)
     for key in dict:
         for key in dict[key]:
-            if word in word_s:
+            if key in word_s:
                 dict[key] = dict[key] - word_s.keys()
 
     return dict
