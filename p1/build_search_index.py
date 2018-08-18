@@ -41,18 +41,18 @@ def load_stopwords(filename):
     return stopwords
 
 
-def word_list(dict):
+def word_list(dict_0):
     '''
         Change case to lower and split the words using a SPACE
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    for key in  dict:
-        dict[i] = dict[i].lower()
+    for key in  dict_0:
+        dict_0[key] = dict_0[key].lower()
         regex = re.compile('[^a-z ]')
-        dict[i] = regex.sub('', dict[i])
-    print(text)
-    return text.split()
+        dict_0[key] = regex.sub('', dict_0[key])
+    print(dict_0)
+    return dict_0
 
 
 def build_search_index(docs):
