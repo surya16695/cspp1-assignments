@@ -83,7 +83,7 @@ def build_search_index(docs):
             if word in dic_4.values():
                 coun_t += 1
             word = [(i, coun_t)]
-        return word
+    return word
 
 
 
