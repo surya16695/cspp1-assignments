@@ -54,7 +54,15 @@ def word_list(dict_0):
     print(dict_0)
     return dict_0
 
-
+def computing(dict):
+    word_s = load_stopwords('stopwords.txt')
+    for key in dict:
+        for word in dict[key]:
+            if word not in word_stop:
+                if word not in dict:
+                    dict[key] -= word
+    print(dict)
+    return dict
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -101,7 +109,7 @@ def main():
     print(documents)
     dic_2 = make_dict(documents)
     dic_2 = word_list(dic_2)
-    
+    dic_2 = computing(dic_2)
     # call print to display the search index
     #print_search_index(build_search_index(documents))
 
