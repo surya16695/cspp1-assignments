@@ -47,7 +47,7 @@ def word_list(dict):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    for i in range(keys):
+    for i in range(dict.keys()):
         dict[i] = dict[i].lower()
         regex = re.compile('[^a-z ]')
         dict[i] = regex.sub('', dict[i])
