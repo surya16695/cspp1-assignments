@@ -40,11 +40,12 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
+    text_1 = []
     for i in range (len(text)):
-        text_1 = text.lower()
+        text_1[i] = text[i].lower()
         regex = re.compile('[^a-z ]')
-        text_1 = regex.sub('', text)
-        print(text_1)
+        text_1[i] = regex.sub('', text[i])
+        print(text_1[i])
     return text.split()
 
 def build_search_index(docs):
