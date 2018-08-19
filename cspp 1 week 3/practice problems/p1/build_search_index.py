@@ -46,7 +46,7 @@ def word_list(text):
         regex = re.compile('[^a-z ]')
         text_1[i] = regex.sub('', text[i])
         print(text_1[i])
-    return text.split()
+    return text_1.split()
 
 def build_search_index(docs):
     '''
