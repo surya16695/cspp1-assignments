@@ -98,7 +98,7 @@ def main():
         documents.append(input())
         i += 1
     print (documents)
-    print (clean(documents))
+    print (word_list(documents))
     # call print to display the search index
     #print_search_index(build_search_index(documents))
 
