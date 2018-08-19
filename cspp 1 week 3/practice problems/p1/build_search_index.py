@@ -41,11 +41,11 @@ def word_list(text):
         return a list of words
     '''
     for i in range (len(text)):
-        text[i] = text[i].lower.split()
+        text[i] = text[i].lower()
         regex = re.compile('[^a-z ]')
         text[i] = regex.sub('', text)
         print(text[i])
-    return text
+    return text.split()
 
 def build_search_index(docs):
     '''
