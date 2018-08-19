@@ -63,12 +63,12 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    index = {}
-    docs = clean(docs)
-    word_list = load_stopwords('stopwords.txt')
-    for word 
-    docs_1 = enumerate(docs, 1)
-    for c in docs:
+    # index = {}
+    # docs = clean(docs)
+    # word_list = load_stopwords('stopwords.txt')
+    # for word 
+    # docs_1 = enumerate(docs, 1)
+    # for c in docs:
 
 
 
