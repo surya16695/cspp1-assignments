@@ -34,18 +34,18 @@ def load_stopwords(filename):
     return stopwords
 
 
-# def word_list(text):
-#     '''
-#         Change case to lower and split the words using a SPACE
-#         Clean up the text by remvoing all the non alphabet characters
-#         return a list of words
-#     '''
-#     for i in range (len(text)):
-#         text[i] = text[i].lower()
-#         regex = re.compile('[^a-z ]')
-#         text[i] = regex.sub('', text)
-#         print(text[i])
-#     return text.split()
+def word_list(text):
+    '''
+        Change case to lower and split the words using a SPACE
+        Clean up the text by remvoing all the non alphabet characters
+        return a list of words
+    '''
+    for i in range (len(text)):
+        text_1 = text.lower()
+        regex = re.compile('[^a-z ]')
+        text_1 = regex.sub('', text)
+        print(text_1)
+    return text.split()
 
 def build_search_index(docs):
     '''
@@ -98,6 +98,7 @@ def main():
         documents.append(input())
         i += 1
     print (documents)
+    print (clean(documents))
     # call print to display the search index
     #print_search_index(build_search_index(documents))
 
