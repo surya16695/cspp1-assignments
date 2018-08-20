@@ -38,12 +38,12 @@ def search(search_index, query):
         collect all the values for the words that are in the search_index
         make a set of doc_id and return
     '''
-    list_1 = {}
+    list_1 = []
     query = clean(query)
     for each_word in query:
         if each_word in search_index:
-            for i,j in enumerate(search_index[each_word]):
-                list_1[i] = search_index[each_word][i] 
+            for i,j in (search_index[each_word]):
+                list_1 = search_index[each_word][i] 
     return list_1
 
 def clean(query):
