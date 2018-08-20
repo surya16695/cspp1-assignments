@@ -41,9 +41,11 @@ def search(search_index, query):
     list_1 = []
     query = clean(query)
     for each_word in query:
-        if each_word in search_index:
-            for i in range(len(search_index[each_word])-1):
-                list_1 = search_index[each_word][i][0]
+        if each_word not in search_index:
+            return []
+        else:
+            for i,j in search_index[each_word]:
+                list_1 = i
     return list_1
 
 def clean(query):
