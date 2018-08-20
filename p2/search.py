@@ -45,7 +45,7 @@ def search(search_index, query):
             return []
         else:
             for i,j in search_index[each_word]:
-                list_1 = i
+                list_1 = i+list_1
     return list_1
 
 def clean(query):
