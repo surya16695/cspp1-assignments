@@ -42,9 +42,11 @@ def word_list(text):
     '''
     load_word = []
     for i, j in enumerate(text):
-        regex = re.compile('[^a-z]')
-        load_word = (regex.sub('', eachword)for eachword in j.lower().split())
-    return load_word
+        for char in j:
+            if not (char.isalnum() or char == ' '):
+                text[i] = text[i].replace(char, '')
+        list_of_words = [doc.lower().split() for doc in text]
+    return list_of_words
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
