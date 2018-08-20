@@ -50,7 +50,7 @@ def clean(query):
     query = query.lower()
     regex = re.compile('[^a-z ]')
     query = regex.sub('', query)
-    print(input_string)
+    print(query)
     return query.split()
 
 
