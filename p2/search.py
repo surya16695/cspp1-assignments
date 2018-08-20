@@ -46,7 +46,7 @@ def search(search_index, query):
         else:
             for i,j in search_index[each_word]:
                 list_1.append(i)
-    return sorted(set.(list_1))
+    return set(sorted(list_1))
 
 def clean(query):
     query = query.lower()
