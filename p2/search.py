@@ -41,9 +41,7 @@ def search(search_index, query):
     list_1 = []
     query = clean(query)
     for each_word in query:
-        if each_word not in search_index:
-            return []
-        else:
+        if each_word in search_index:
             for i,j in search_index[each_word]:
                 list_1.append(i)
     return set(sorted(list_1))
@@ -52,7 +50,7 @@ def clean(query):
     query = query.lower()
     regex = re.compile('[^a-z ]')
     query = regex.sub('', query)
-    print(query.split())
+    #print(query.split())
     return query.split()
 
 
