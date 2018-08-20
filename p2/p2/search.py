@@ -56,7 +56,7 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    pass
+    list_1 = search(search_index, query)
 
 def main():
     '''
