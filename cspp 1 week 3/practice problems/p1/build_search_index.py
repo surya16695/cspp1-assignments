@@ -99,10 +99,10 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-    print (documents)
-    print (word_list(documents))
+    #print (documents)
+    #print (word_list(documents))
     # call print to display the search index
-    #print_search_index(build_search_index(documents))
+    print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()
