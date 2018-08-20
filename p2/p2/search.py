@@ -57,9 +57,12 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
+    dict_1 = {}
     for word in queries:
         if word in search_index:
-            return search(search_index, queries)  
+            dict_1 =  search(search_index, queries)
+    print (dict_1)
+    return dict_1 
 
 
 def main():
