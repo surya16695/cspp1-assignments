@@ -40,14 +40,11 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    text_1 = []
-    for i in range (0, len(text)-1):
-        text_1[i] = text[i].lower()
-        regex = re.compile('[^a-z ]')
-        text_1[i] = regex.sub('', text_1[i])
-        print(text_1[i])
-    return text_1.split()
-
+    load_word = []
+    for i, j in enumerate(text):
+        regex = re.compile('[^a-z]')
+        load_word = (regex.sub('', eachword)for eachword in text.lower().split())
+    return load_word
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -63,16 +60,18 @@ def build_search_index(docs):
 
         # add or update the words of the doc to the search index
 
-    # return search index
-    # index = {}
-    # docs = clean(docs)
-    # word_list = load_stopwords('stopwords.txt')
-    # for word 
-    # docs_1 = enumerate(docs, 1)
-    # for c in docs:
-
-
-
+    srch_indx = {}
+    stop_words = load_stopwords('stopwords.txt')
+    documents = word_list(docs)
+    for i, j in enumerate(documents):
+        for word in j:
+            if (word not in stop_words) and (word not in srch_indx):
+                srch_indx[word] = [(i, j.count(word))]
+            elif (word not in stop_words) and (word in srch_indx):
+                srch_indx[word] += [(i, j.count(word))]
+    for word in srch_indx:
+        srch_indx[word] = sorted(list(set(srch_indx[word])))
+    return srch_indx
 
 
 # helper function to print the search index
