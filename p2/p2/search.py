@@ -42,6 +42,7 @@ def search(search_index, query):
     regex = re.compile('[^a-z]')
     query = query.lower()
     query = regex.sub('', query).split()
+    print(query)
     lis_t = []
     for word in query:
         if word in search_index:
@@ -78,7 +79,7 @@ def main():
         i += 1
 
     # call process queries
-    #process_queries(search_index, queries)
+    process_queries(search_index, queries)
 
 if __name__ == '__main__':
     main()
