@@ -40,8 +40,8 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     regex = re.compile('[^a-z]')
-    query = regex.sub('', query)
-    query = query.lower().split()
+    query = query.lower()
+    query = regex.sub('', query).split()
     lis_t = []
     for word in query:
         if word in search_index:
@@ -56,7 +56,10 @@ def process_queries(search_index, queries):
         iterate through all the queries and call the search function
         print the results returned by search function
     '''
-    list_1 = search(search_index, query)
+    for word in query:
+        if word in search_index:
+            return search(search_index, query)  
+
 
 def main():
     '''
@@ -75,7 +78,7 @@ def main():
         i += 1
 
     # call process queries
-    process_queries(search_index, queries)
+    #process_queries(search_index, queries)
 
 if __name__ == '__main__':
     main()
