@@ -43,7 +43,7 @@ def word_list(text):
     load_word = []
     for i, j in enumerate(text):
         regex = re.compile('[^a-z]')
-        load_word = (regex.sub('', eachword)for eachword in text.lower().split())
+        load_word = (regex.sub('', eachword)for eachword in j.lower().split())
     return load_word
 def build_search_index(docs):
     '''
