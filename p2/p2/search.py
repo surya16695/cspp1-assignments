@@ -39,10 +39,6 @@ def search(search_index, query):
         collect all the values for the words that are in the search_index
         make a set of doc_id and return
     '''
-    regex = re.compile('[^a-z]')
-    query = query.lower()
-    query = regex.sub('', query).split()
-    print(query)
     lis_t = []
     for word in query:
         if word in search_index:
@@ -80,6 +76,11 @@ def main():
     for i in range(lines):
         queries.append(input())
         i += 1
+    regex = re.compile('[^a-z]')
+    queries = queries.lower()
+    queries = regex.sub('', queries).split()
+    print(query)
+
 
     # call process queries
     process_queries(search_index, queries)
