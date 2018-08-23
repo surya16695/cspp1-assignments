@@ -73,7 +73,7 @@ def main():
     mat_2 = read_matrix()
     #print(mat_2)
     # add matrix 1 and matrix 2
-    if mat_1 != None and mat_2 != None:
+    if mat_1 != None or mat_2 != None:
         print(add_matrix(mat_1, mat_2))
     # multiply matrix 1 and matrix 2
     if mat_1 != None or mat_2 != None:
