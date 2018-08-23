@@ -18,7 +18,7 @@ def add_matrix(m1, m2):
     '''
     # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
     #     for i in range(len(m1)):
-            
+
 
 
 def read_matrix():
@@ -36,7 +36,10 @@ def read_matrix():
     lis_t = []
     for j in range(m):
         lis_t.append([int(i) for i in input().split()])
-    return lis_t
+    for value in lis_t:
+        if len(lis_t[value]) == n:
+            return lis_t
+    return error
 
 
 def main():
