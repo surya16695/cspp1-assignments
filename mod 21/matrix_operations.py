@@ -37,9 +37,9 @@ def read_matrix():
     for j in range(m):
         lis_t.append([int(i) for i in input().split()])
     for i in range(len(lis_t)):
-        if len(lis_t[i]) == n:
-            return lis_t
-        return error
+        if len(lis_t[i]) != n:
+            return print("Error in values")
+    return lis_t
 
 
 def main():
