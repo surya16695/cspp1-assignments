@@ -15,7 +15,7 @@ def mult_matrix(m1, m2):
        # iterate through columns of Y
        for j in range(len(m2[0])):
            # iterate through rows of Y
-           sum = 0
+            sum = 0
             for k in range(len(m2)):
                sum += m1[i][k] * m2[k][j]
         result.append (sum)
