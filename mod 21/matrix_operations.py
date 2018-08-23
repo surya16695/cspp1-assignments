@@ -39,7 +39,7 @@ def read_matrix():
     for value in lis_t:
         if len(lis_t[value]) == n:
             return lis_t
-    return error
+        return error
 
 
 def main():
