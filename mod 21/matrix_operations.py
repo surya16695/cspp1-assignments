@@ -20,7 +20,7 @@ def add_matrix(m1, m2):
         sum = []
         for i in range(len(m1)):
             for j in range(len(m1[i])):
-                sum.append(m1[i][j] + m2[i][j])
+                sum[i][j].append(m1[i][j] + m2[i][j])
         return sum
     return print("Error: Matrix shapes invalid for addition")
 
