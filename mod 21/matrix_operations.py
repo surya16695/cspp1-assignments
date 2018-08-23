@@ -32,7 +32,7 @@ def add_matrix(m1, m2):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     result = []
-    if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
+    if len(m1) == len(m2):
         sum = 0
         for i in range(len(m1)):
             sum = []
