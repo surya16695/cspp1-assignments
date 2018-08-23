@@ -10,13 +10,15 @@ def mult_matrix(m1, m2):
         print("Error: Matrix shapes invalid for mult")
         return None
     m_2 = []
-    result = []
     for i in range(len(m1)):
+        result = []
        # iterate through columns of Y
        for j in range(len(m2[0])):
            # iterate through rows of Y
-           for k in range(len(m2)):
-               result[i][j] += m1[i][k] * m2[k][j]
+           sum = 0
+            for k in range(len(m2)):
+               sum += m1[i][k] * m2[k][j]
+        result.append (sum)
     return result
 
 
