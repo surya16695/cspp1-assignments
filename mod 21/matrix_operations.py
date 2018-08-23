@@ -6,7 +6,17 @@ def mult_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    pass
+    if len(m1[0]) != len(m2):
+        print("Error: Matrix shapes invalid for mult")
+    return None
+    else:
+        m_1 = []
+        m_2 = []
+        for i in range(len(m1)):
+            for j in range(len(m2[0])):
+            m_1.append(m1[i][j] * m2[j][i])
+        return m_1
+
 
 def add_matrix(m1, m2):
     '''
@@ -25,7 +35,9 @@ def add_matrix(m1, m2):
                 sum.append(m1[i][j] + m2[i][j])
             result.append(sum)
     return result
-    return print("Error: Matrix shapes invalid for addition")
+    else:
+    print("Error: Matrix shapes invalid for addition")
+    return None
 
 def read_matrix():
     '''
