@@ -19,7 +19,7 @@ def mult_matrix(m1, m2):
             for k in range(len(m2)):
                 sum += m1[i][k] * m2[k][j]
         result.append (sum)
-    return result
+    return m_2.append(result)
 
 
 def add_matrix(m1, m2):
