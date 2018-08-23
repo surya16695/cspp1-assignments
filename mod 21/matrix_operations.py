@@ -59,7 +59,8 @@ def read_matrix():
         lis_t.append([int(i) for i in input().split()])
     for i in range(0, len(lis_t)-1):
         if len(lis_t[i]) != n:
-            return print("Error: Invalid input for the matrix")
+            print("Error: Invalid input for the matrix")
+            return None
     return lis_t
 
 
