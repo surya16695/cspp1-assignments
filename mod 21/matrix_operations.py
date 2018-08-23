@@ -16,9 +16,9 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
+    result = []
     if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
         sum = 0
-        result = []
         for i in range(len(m1)-1):
             sum = []
             for j in range(len(m1[i])-1):
