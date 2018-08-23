@@ -16,10 +16,13 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    # if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
-    #     for i in range(len(m1)):
-
-
+    sum = []
+    if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
+        for i in range(len(m1)):
+            for j in range (len(m1)):
+                sum = m1[i][j] + m2[i][j]
+        return sum
+    return print("Error: Matrix shapes invalid for addition")
 
 def read_matrix():
     '''
@@ -36,9 +39,9 @@ def read_matrix():
     lis_t = []
     for j in range(m):
         lis_t.append([int(i) for i in input().split()])
-    for i in range(len(lis_t)):
+    for i in range(0, len(lis_t)-1):
         if len(lis_t[i]) != n:
-            return print("Error in values")
+            return print("Error: Invalid input for the matrix")
     return lis_t
 
 
