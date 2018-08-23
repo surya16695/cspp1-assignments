@@ -23,7 +23,7 @@ def add_matrix(m1, m2):
             sum = []
             for j in range(len(m1[i])):
                 sum.append(m1[i][j] + m2[i][j])
-        result.append(sum)
+            result.append(sum)
     return result
     return print("Error: Matrix shapes invalid for addition")
 
