@@ -22,8 +22,8 @@ def add_matrix(m1, m2):
         for i in range(len(m1)-1):
             for j in range(len(m1[i])-1):
                 sum = (m1[i][j] + m2[i][j])
-                result[i].append(sum)
-        return result
+        result[i].append(sum)
+    return result
     return print("Error: Matrix shapes invalid for addition")
 
 def read_matrix():
