@@ -47,7 +47,7 @@ def read_matrix():
     line = input().split(',')
     m = int(line[0])
     n = int(line[1])
-    print(line)
+    #print(line)
     lis_t = []
     for j in range(m):
         lis_t.append([int(i) for i in input().split()])
@@ -63,15 +63,16 @@ def main():
     mat_3 = []
     # read matrix 1
     mat_1 = read_matrix()
-    print(mat_1)
+    #print(mat_1)
     # read matrix 2
     mat_2 = read_matrix()
-    print(mat_2)
+    #print(mat_2)
     # add matrix 1 and matrix 2
     mat_3 = add_matrix(mat_1, mat_2)
     print(mat_3)
     # multiply matrix 1 and matrix 2
-    pass
+    mat_4 = mult_matrix(mat_1, mat_2)
+    print(mat_4)
 
 if __name__ == '__main__':
     main()
