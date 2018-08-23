@@ -74,10 +74,10 @@ def main():
     mat_2 = read_matrix()
     #print(mat_2)
     # add matrix 1 and matrix 2
-    if mat_1 is not None or mat_2 is not None:
+    if mat_1 is not None and mat_2 is not None:
         print(add_matrix(mat_1, mat_2))
     # multiply matrix 1 and matrix 2
-    if mat_1 is not None or mat_2 is not None:
+    if mat_1 is not None and mat_2 is not None:
         print(mult_matrix(mat_1, mat_2))
 
 if __name__ == '__main__':
