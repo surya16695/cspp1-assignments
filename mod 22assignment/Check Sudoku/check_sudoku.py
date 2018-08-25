@@ -14,9 +14,12 @@ def check_sudoku(grid):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
+    count_1 = 0
     for i in range(9):
         l = grid[i]
-        if (''.join(l.sort()) != '123456789'):
+        count_0 = 45
+        count_1 = l[i] + count_1
+    if count_0 != count_1:
             return False
     for i in range(9):
         for j in range(9):
