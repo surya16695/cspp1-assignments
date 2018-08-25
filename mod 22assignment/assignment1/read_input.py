@@ -8,9 +8,8 @@ def main():
     lines = input()
     for i in range(n):
         for line in lines:
-            s = s + str(line "\n")
-    # for i in range(len(s)):
-    print(s)
+            s = str(line "\n")
+            print(s)
     # return s
 
 
