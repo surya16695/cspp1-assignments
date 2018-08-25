@@ -7,7 +7,7 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-def check(lst):
+def check_sudoku(lst):
     for i in range(9):
         l = lst[i]
         if ''.join(l.sort()) != '123456789':
