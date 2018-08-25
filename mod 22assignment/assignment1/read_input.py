@@ -7,10 +7,10 @@ def main():
     s = ""
     lines = input()
     for i in range(n):
-    	for line in lines:
-    		s = s + str(line)
+        for line in lines:
+            s = s + str(line)
     for i in range(len(s)):
-		print(s(i))
+        print(s(i))
     # return s
 
 
