@@ -20,22 +20,17 @@ def check_sudoku(grid):
         l = sorted(l)
         if ( l!= l_1):
             return False
-        else:
-            col(grid)
-def col(grid):
     for i in range(9):
         for j in range(9):
             l.append(grid[j][i])
             # print(l)
             if ( l!= l_1):
                 return False
-        else:
-            square(grid)
-def square(grid):
-    for j in range(i, i+2):
-        for k in range(j, j+2):
-            l.append(grid[j][i])
-    
+    l_2 = []
+    for i in range(3):
+        for j in range (3):
+            l_2.append(l[j][i])
+    print(l_2)
 
 
 
