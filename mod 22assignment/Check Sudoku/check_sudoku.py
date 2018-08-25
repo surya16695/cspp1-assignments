@@ -14,17 +14,17 @@ def check_sudoku(grid):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
+    l_1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     for i in range(9):
         l = grid[i]
-        l_1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
         l = sorted(l)
         if ( l!= l_1):
             print('False')
-        else :
-            print('true')
+
     for i in range(9):
         for j in range(9):
             l.append(grid[j][i])
+            print(l)
             if (''.join(l.sort()) != '123456789'):
                 return False
 
