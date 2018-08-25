@@ -16,7 +16,7 @@ def main():
     for i in xrange(no_of_lines):
         lines+=input()+"\n"
 
-    print lines
+    print (lines)
 
 if __name__ == '__main__':
     main()
