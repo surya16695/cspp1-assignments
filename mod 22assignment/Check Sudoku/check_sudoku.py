@@ -20,7 +20,7 @@
 def sum(line):
     sum_1 = 0
     for i in range(len(line)):
-        sum_1 = sum_1 + line(i)
+        sum_1 = sum_1 + line[i]
     return sum_1
 def sudoku_ok(line):
     print(line)
