@@ -7,12 +7,12 @@ import re
 def tokenize(string):
 	"""tokenize strings"""
     dic_t = {}
-    s = ""
+    # s = ""
     input_string = string    
     regex = re.compile("[^a-zA-Z0-9]")
     input_string = regex.sub('', input_string)
     s = input_string.split(" ")[:-1]
-    for word in string:
+    for word in s:
         if word not in dic_t:
             dic_t[word] = string.count(word) 
     return dic_t
