@@ -14,16 +14,21 @@ def check_sudoku(grid):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
+    if row(grid) is True and col(grid) is True and dir(grid) is True:
+        return True
+    return False
+
+
+def row(grid):
     l_1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
     for i in range(9):
         l = grid[i]
         l = sorted(l)
         if ( l[i] == l_1):
             l = col(l)
-            if col(l) is True:
-                return True
-            else:
-                return False
+            return True
+        else:
+            return False
 def col(grid):
     for i in range(9):
         for j in range(9):
@@ -31,17 +36,16 @@ def col(grid):
             # print(l)
     if ( l[i] == l_1):
         l = dir(l)
-        if dir(l) is True:
-            return True
-        else:
-            return False
+        return True
+    else:
+        return False
 def dir(grid):
     # l_2 = []
     # for i in range(3):
     #     for j in range (3):
     #         l_2.append(l[j][i])
     # print(l_2)
-        return True
+    return True
 
 
 
