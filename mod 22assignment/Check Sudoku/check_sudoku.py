@@ -23,14 +23,14 @@ def check_sudoku(grid):
     for i in range(9):
         for j in range(9):
             l.append(grid[j][i])
-            print(l)
+            # print(l)
             if ( l!= l_1):
                 return False
-    l_1 = []
+    l_2 = []
     for i in range(3):
         for j in range (3):
             l_1.append(l[i][j])
-    print(l_1)
+    print(l_2)
 
 
 
