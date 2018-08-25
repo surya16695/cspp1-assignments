@@ -11,8 +11,7 @@ def tokenize(string):
             if word not in dic_t.keys():
                 dic_t[word] = 1
             else:
-                count_1 += 1
-                dic_t[word] = count_1
+                dic_t[word] += 1
     return dic_t
             
 def main():
