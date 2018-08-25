@@ -4,8 +4,8 @@ alphabets in both upper and lower case and numbers.
 '''
 import re
 def clean_string(string):
-	input_string = input_string
-	regex = re.compile("[^a-z A-Z]")
+    input_string = string
+    regex = re.compile("[^a-z A-Z]")
     input_string = regex.sub('', input_string)
     # print(input_string)
     return input_string.split()
