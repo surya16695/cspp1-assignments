@@ -20,7 +20,7 @@ def check_sudoku(grid):
         l = sorted(l)
         if ( l[i] == l_1):
             l = col(l)
-            if l is True:
+            if col(l) is True:
                 return True
             else:
                 return False
@@ -31,7 +31,7 @@ def col(grid):
             # print(l)
     if ( l[i] == l_1):
         l = dir(l)
-        if l is True:
+        if dir(l) is True:
             return True
         else:
             return False
