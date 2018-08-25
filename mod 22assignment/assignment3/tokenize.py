@@ -3,18 +3,15 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 import re
-def clean_string(string):
-    """ cleaning of string"""
-    input_string = string
-    regex = re.compile("[^a-zA-Z0-9]")
-    input_string = regex.sub('', input_string)
-    return input_string.split(" ")[:-1]
 
 def tokenize(string):
 	"""tokenize strings"""
-	string_1 = ""
-    string_1 = clean_string(string)
     dic_t = {}
+    s = ""
+    input_string = string    
+    regex = re.compile("[^a-zA-Z0-9]")
+    input_string = regex.sub('', input_string)
+    s = input_string.split(" ")[:-1]
     for word in string:
         if word not in dic_t:
             dic_t[word] = string.count(word) 
