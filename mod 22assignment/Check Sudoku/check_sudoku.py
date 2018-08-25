@@ -8,52 +8,27 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 
-# def sudoku_ok(line):
-#     print(line)
-#     return (len(line) == 9 and sum(line) == sum(set(line)))
+def sudoku_ok(line):
+    print(line)
+    return (len(line) == 9 and sum(line[0:-1]) == sum(set(line[0:-1])))
 
-# def check_sudoku(grid):
-#     '''
-#         Your solution goes here. You may add other helper functions as needed.
-#         The function has to return True for a valid sudoku grid and false otherwise
-#     '''
-#     # print(grid)
-#     bad_rows = [row for row in grid if not sudoku_ok(row)]
-#     grid = list(zip(*grid))
-#     bad_cols = [col for col in grid if not sudoku_ok(col)]
-#     squares = []
-#     for i in range(9, step=3):
-#         for j in range(9, step=3):
-#           square = list(itertools.chain(row[j:j+3] for row in grid[i:i+3]))
-#           squares.append(square)
-#     bad_squares = [square for square in squares if not sudoku_ok(square)]
-#     return not (bad_rows or bad_cols or bad_squares)
 def check_sudoku(grid):
-    for row in range(len(grid)):
-        for col in range(len(grid)):
-            # check value is an int
-            if grid[row][col] < 1 or type(grid[row][col]) is not type(1):
-                return False
-            # check value is within 1 through n.
-            # for example a 2x2 grid should not have the value 8 in it
-            elif grid[row][col] > len(grid):
-                return False
-    # check the rows
-    for row in grid:
-        if sorted(list(set(row))) != sorted(row):
-            return False
-    # check the cols
-    cols = []
-    for col in range(len(grid)):
-        for row in grid:
-            cols += [row[col]]
-        # set will get unique values, its converted to list so you can compare
-        # it's sorted so the comparison is done correctly.
-        if sorted(list(set(cols))) != sorted(cols):
-            return False
-        cols = []
-    # if you get past all the false checks return True
-    return True
+    '''
+        Your solution goes here. You may add other helper functions as needed.
+        The function has to return True for a valid sudoku grid and false otherwise
+    '''
+    # print(grid)
+    bad_rows = [row for row in grid if not sudoku_ok(row)]
+    grid = list(zip(*grid))
+    bad_cols = [col for col in grid if not sudoku_ok(col)]
+    squares = []
+    for i in range(9, step=3):
+        for j in range(9, step=3):
+          square = list(itertools.chain(row[j:j+3] for row in grid[i:i+3]))
+          squares.append(square)
+    bad_squares = [square for square in squares if not sudoku_ok(square)]
+    return not (bad_rows or bad_cols or bad_squares)
+
 
 def main():
     '''
