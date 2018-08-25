@@ -5,7 +5,7 @@ each word
 import re
 
 def tokenize(string):
-	"""tokenize strings"""
+    """tokenize strings"""
     dic_t = {}
     # s = ""
     input_string = string    
