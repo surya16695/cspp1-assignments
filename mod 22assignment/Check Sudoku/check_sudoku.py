@@ -17,8 +17,8 @@ def check_sudoku(grid):
     for i in range(9):
         l = grid[i]
         l_1 = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-        print(sorted(l))
-        if (l.sort() != l_1):
+        l = sorted(l)
+        if ( l!= l_1):
             print('False')
     for i in range(9):
         for j in range(9):
