@@ -8,7 +8,7 @@ def tokenize(string):
     count_1 = 0
     for i in range(len(string)):
         for word in string:
-            if word  in dic_t.keys():
+            if word  in dic_t:
                 dic_t[word] += 1
             else:
                 dic_t[word] = 1
