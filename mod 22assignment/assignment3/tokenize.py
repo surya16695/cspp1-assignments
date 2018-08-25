@@ -13,16 +13,7 @@ def tokenize(string):
             else:
                 dic_t[word] = 1
     return dic_t
-            def word_count(arg):
-    var_dict = {}
-    arg = arg.lower().split()
-    for a in arg:
-        if a in var_dict:
-            var_dict[a]+=1;
-        else:
-            var_dict[a] = 1;
-
-    return var_dict
+    
 def main():
     n = int(input())
     l_1 = ""
