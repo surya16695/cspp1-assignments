@@ -9,7 +9,7 @@ frequency of each word. Display the frequency values using “#” as a text bas
 #     	print(n*s)
 	 
 def frequency_graph(dictionary):
-    for word in dictionary.keys():
+    for word in sorted(dictionary.keys()):
     	print(word, '-', dictionary[word]*"#")
 
 
