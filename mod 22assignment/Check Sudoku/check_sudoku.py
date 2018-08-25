@@ -18,15 +18,15 @@ def check_sudoku(grid):
     for i in range(9):
         l = grid[i]
         l = sorted(l)
-        if ( l[i]!= l_1):
+        if ( l[i] == l_1):
             return False
         else:
             for i in range(9):
                 for j in range(9):
                     l.append(grid[j][i])
                     # print(l)
-            if ( l[i]!= l_1):
-                return False
+            if ( l[i] == l_1):
+                return True
             else:
             # l_2 = []
             # for i in range(3):
