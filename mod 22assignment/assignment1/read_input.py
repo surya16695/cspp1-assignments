@@ -9,7 +9,7 @@ def main():
     for i in range(n):
         for line in lines:
             s = s + str(line )
-    print(s)
+        print(s)
     # return s
 
 
