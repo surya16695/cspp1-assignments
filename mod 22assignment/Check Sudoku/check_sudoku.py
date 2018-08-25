@@ -18,8 +18,10 @@
 #     if ''.join(l.sort()) != '123456789':
 #             return False
 def sum(line):
-    for i in line:
-        return i+sum(line)
+    sum_1 = 0
+    for i in range(len(line)):
+        sum_1 = sum_1 + line(i)
+    return sum_1
 def sudoku_ok(line):
     return (len(line) == 9 and sum(line) == sum(set(line)))
 
