@@ -6,7 +6,7 @@ def main():
     '''input lines'''
     no_of_lines = int(input())
     l = ""
-    for line in lines:
+    for i in range(no_of_lines):
         l += input()+"\n"
 
     print(l)
