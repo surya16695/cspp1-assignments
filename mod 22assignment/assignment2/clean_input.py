@@ -5,10 +5,12 @@ alphabets in both upper and lower case and numbers.
 import re
 def clean_string(string):
     input_string = string
+    str_1 = ""
     regex = re.compile("[^a-z A-Z 0-9]")
-    input_string = regex.sub( 0, input_string.strip())
+    input_string = regex.sub( '', input_string.strip())
+    str_1 = input_string.strip()
     # print(input_string)
-    return input_string
+    return str_1
 
 def main():
     string = input()
