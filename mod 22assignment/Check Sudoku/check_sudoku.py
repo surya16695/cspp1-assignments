@@ -10,7 +10,7 @@
 
 def sudoku_ok(line):
     print(line)
-    return (len(line) == 9 and sum(line[0:-1]) == sum(sorted(line[0:-1])))
+    return (len(line) == 9 and sum(int(line[0:-1])) == sum(sorted(int(line[0:-1])))
 
 def check_sudoku(grid):
     '''
