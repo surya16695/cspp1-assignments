@@ -8,7 +8,6 @@ def print_dictionary(dictionary):
     """Converting dict to print as given"""
     for word in sorted(dictionary.keys()):
         print(word, '-', dictionary[word])
-    
 
 def main():
     """input dict"""
