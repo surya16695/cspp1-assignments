@@ -23,6 +23,7 @@ def sum(line):
         sum_1 = sum_1 + line(i)
     return sum_1
 def sudoku_ok(line):
+    print(line)
     return (len(line) == 9 and sum(line) == sum(set(line)))
 
 def check_sudoku(grid):
@@ -30,7 +31,7 @@ def check_sudoku(grid):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    print(grid)
+    # print(grid)
     bad_rows = [row for row in grid if not sudoku_ok(row)]
     grid = list(zip(*grid))
     bad_cols = [col for col in grid if not sudoku_ok(col)]
