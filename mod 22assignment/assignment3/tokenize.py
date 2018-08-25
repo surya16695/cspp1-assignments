@@ -4,8 +4,18 @@ each word
 '''
 
 def tokenize(string):
+    dic_t = {}
+    count_1 = 0
+    for i in range(len(string)):
+        for word in string:
+            if word  in dic_t.keys():
+                dic_t[word] += 1
+            else:
+                dic_t[word] = 1
+    return dic_t
+            def word_count(arg):
     var_dict = {}
-    arg = string.split()
+    arg = arg.lower().split()
     for a in arg:
         if a in var_dict:
             var_dict[a]+=1;
@@ -13,7 +23,6 @@ def tokenize(string):
             var_dict[a] = 1;
 
     return var_dict
-            
 def main():
     n = int(input())
     l_1 = ""
