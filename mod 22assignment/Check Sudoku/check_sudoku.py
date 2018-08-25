@@ -25,8 +25,10 @@ def check_sudoku(grid):
         for j in range(9):
             l.append(grid[j][i])
             print(l)
-            if (''.join(l.sort()) != '123456789'):
+            if ( l!= l_1):
+                print('false')
                 return False
+
 
 
 def main():
