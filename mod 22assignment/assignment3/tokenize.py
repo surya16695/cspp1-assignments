@@ -2,6 +2,7 @@
 Write a function to tokenize a given string and return a dictionary with the frequency of
 each word
 '''
+import re
 def clean_string(string):
     """ cleaning of string"""
     input_string = string
