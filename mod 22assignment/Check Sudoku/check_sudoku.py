@@ -9,7 +9,7 @@
 '''
 def sum_1(line):
     # for i in range(len(line)):
-        sum_1 = sum(int(line[0:len(line)-1]))
+    sum_1 = sum(int(line[0:-1]))
     return sum_1
 
 def sudoku_ok(line):
