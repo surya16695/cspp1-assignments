@@ -8,7 +8,7 @@ def main():
     s = ""
     for i in range(n):
         for line in lines:
-            s = s + str(line)
+            s = s + + str(line)
     print(s)
     # return s
 
