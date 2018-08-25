@@ -11,8 +11,8 @@ def clean_string(string):
 
 def tokenize(string):
 	"""tokenize strings"""
-    dic_t = {}
     string = clean_string(string)
+    dic_t = {}
     for word in string:
         if word not in dic_t:
             dic_t[word] = string.count(word) 
