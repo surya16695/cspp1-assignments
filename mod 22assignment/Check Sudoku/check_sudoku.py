@@ -19,21 +19,29 @@ def check_sudoku(grid):
         l = grid[i]
         l = sorted(l)
         if ( l[i] == l_1):
-            return False
-        else:
-            for i in range(9):
-                for j in range(9):
-                    l.append(grid[j][i])
-                    # print(l)
-            if ( l[i] == l_1):
+            l = col(l)
+            if l is True:
                 return True
             else:
-            # l_2 = []
-            # for i in range(3):
-            #     for j in range (3):
-            #         l_2.append(l[j][i])
-            # print(l_2)
-                return True
+                return False
+def col(grid):
+    for i in range(9):
+        for j in range(9):
+            l.append(grid[j][i])
+            # print(l)
+    if ( l[i] == l_1):
+        l = dir(l)
+        if l is True:
+            return True
+        else:
+            return False
+def dir(grid)
+    # l_2 = []
+    # for i in range(3):
+    #     for j in range (3):
+    #         l_2.append(l[j][i])
+    # print(l_2)
+        return True
 
 
 
