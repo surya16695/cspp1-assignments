@@ -2,7 +2,7 @@
 Write a function to tokenize a given string and return a dictionary with the frequency of
 each word
 '''
-mport re
+import re
 
 def tokenize(string):
    '''Converting given strings to a dictionary with frequencies of each word'''
