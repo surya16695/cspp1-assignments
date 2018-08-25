@@ -8,7 +8,7 @@ def clean_string(string):
     str_1 = ""
     regex = re.compile("[^a-z A-Z 0-9]")
     input_string = regex.sub( '', input_string.strip())
-    str_1 = input_string.strip()
+    str_1 = input_string.replace('', )
     # print(input_string)
     return str_1
 
