@@ -17,9 +17,9 @@ def main():
     n = int(input())
     l_1 = ""
     for i in range(n):
-        l_1 += input().split()
+        l_1 += input()
         i = i+1
     print(l_1)
-    print(tokenize(l_1))
+    print(tokenize(l_1.split()))
 if __name__ == '__main__':
     main()
