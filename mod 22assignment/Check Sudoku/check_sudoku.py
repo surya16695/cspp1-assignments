@@ -20,6 +20,8 @@ def check_sudoku(grid):
         l = sorted(l)
         if ( l!= l_1):
             print('False')
+        else :
+            print('true')
     for i in range(9):
         for j in range(9):
             l.append(grid[j][i])
