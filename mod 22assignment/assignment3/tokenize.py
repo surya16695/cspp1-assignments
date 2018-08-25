@@ -12,12 +12,9 @@ def clean_string(string):
 def tokenize(string):
     dic_t = {}
     count_1 = 0
-    for i in range(len(string)):
-        for word in string:
-            if word  in dic_t:
-                dic_t[word] += 1
-            else:
-                dic_t[word] = 1
+    for word in string:
+        if word not in dic_t:
+            dic_t[word] = string.count(word) 
     return dic_t
     
 def main():
