@@ -5,6 +5,7 @@ each word
 
 def tokenize(string):
     dic_t = {}
+    count_1 = 0
     for i in range(len(string)):
         for word in string:
             if word in dic_t:
@@ -14,6 +15,7 @@ def tokenize(string):
             
 def main():
     n = int(input())
+    l_1 = ""
     for i in range(n):
         l_1 += input()
         i = i+1
