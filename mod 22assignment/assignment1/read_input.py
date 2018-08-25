@@ -13,7 +13,7 @@ def main():
     # # return s
     no_of_lines = int(input())
     lines = ""
-    for i in xrange(no_of_lines):
+    for i in range(no_of_lines):
         lines+=input()+"\n"
 
     print (lines)
