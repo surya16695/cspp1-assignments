@@ -9,8 +9,8 @@ def main():
     for i in range(n):
     	for line in lines:
     		s = s + str(line)
-    # print(s)
-    return s
+    print(s)
+    # return s
 
 
 if __name__ == '__main__':
