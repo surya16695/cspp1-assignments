@@ -17,11 +17,7 @@
 #             l.append(lst[j][i])
 #     if ''.join(l.sort()) != '123456789':
 #             return False
-def sum(line):
-    sum_1 = 0
-    for i in range(len(line)):
-        sum_1 = sum_1 + line[i]
-    return sum_1
+
 def sudoku_ok(line):
     print(line)
     return (len(line) == 9 and sum(line) == sum(set(line)))
