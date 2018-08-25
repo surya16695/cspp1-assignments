@@ -8,6 +8,7 @@ def main():
     l_1 = ""
     for i in range(no_of_lines):
         l_1 += input()+"\n"
+        i += 1
 
     print(l_1)
 
