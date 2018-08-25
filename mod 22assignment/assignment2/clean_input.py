@@ -4,7 +4,7 @@ alphabets in both upper and lower case and numbers.
 '''
 import re
 def clean_string(string):
-	""" cleaning of string"""
+    """ cleaning of string"""
     input_string = string
     regex = re.compile("[^a-zA-Z0-9]")
     input_string = regex.sub('', input_string)
@@ -12,7 +12,7 @@ def clean_string(string):
     return input_string
 
 def main():
-	"""taking input string"""
+    """taking input string"""
     string = input()
     print(clean_string(string))
 
