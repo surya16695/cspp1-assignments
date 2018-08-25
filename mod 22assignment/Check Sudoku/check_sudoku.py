@@ -7,10 +7,13 @@
     Complete the check_sudoku function to check if the given grid
     satisfies all the sudoku rules given in the statement above.
 '''
-
+def sum_1(line):
+    for i in range(len(line)):
+        sum_1 = sum(int(line[i]))
+    return sum_1
 def sudoku_ok(line):
     print(line)
-    return (len(line) == 9 and sum(int(line[0:-1])) == sum(sorted(int(line[0:-1])))
+    return (len(line) == 9 and sum_1(line) == sum_1(sorted(line)))
 
 def check_sudoku(grid):
     '''
