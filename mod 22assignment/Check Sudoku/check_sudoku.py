@@ -35,7 +35,7 @@ def col(grid):
             return True
         else:
             return False
-def dir(grid)
+def dir(grid):
     # l_2 = []
     # for i in range(3):
     #     for j in range (3):
