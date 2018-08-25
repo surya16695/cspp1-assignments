@@ -8,8 +8,8 @@ def main():
     s = ""
     for i in range(n):
         for line in lines:
-            s = s + str(line )
-    print(s.split())
+            s = s + str(line.split())
+    print(s)
     # return s
 
 
