@@ -29,7 +29,7 @@ def check_sudoku(grid):
     l_2 = []
     for i in range(3):
         for j in range (3):
-            l_1.append(l[i][j])
+            l_2.append(l[i][j])
     print(l_2)
 
 
