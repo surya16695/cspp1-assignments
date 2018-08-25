@@ -7,9 +7,9 @@ def fib(n):
     elif n == 1:
         return 1
     else:
-        i =0
+        i =0 
         while i<n:
-            lis_t = lis_t.append(fib(n-1)+fib(n))
+            lis_t.append(fib(n-1)+fib(n))
             i = i+1
     return lis_t
 def main():
